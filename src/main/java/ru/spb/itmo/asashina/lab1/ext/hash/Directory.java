@@ -6,10 +6,10 @@ import java.util.logging.Logger;
 public class Directory<T> {
 
     private static final Logger log = Logger.getLogger(Directory.class.getName());
-    private static final int MAX_BUCKETS = 32;
+    private static final int MAX_GLOBAL_DEPTH = 32;
 
     private int globalDepth = 0;
-    private Bucket[] buckets;
+    private Bucket<T>[] buckets;
     private int nextBucketPosition;
 
     private final long bucketCapacity;
@@ -22,7 +22,7 @@ public class Directory<T> {
     }
 
     public void insert(T value) {
-        var key = getLastNBitsFromValueHash(value.hashCode(), globalDepth);
+        var key = getLastNBitsFromValueHash(Math.abs(value.hashCode()), globalDepth);
         var bucket = getBucketByKey(key);
         var result = bucket.insert(value);
         if (result) {
@@ -40,7 +40,7 @@ public class Directory<T> {
     }
 
     public Integer getKey(T value) {
-        var key = getLastNBitsFromValueHash(value.hashCode(), globalDepth);
+        var key = getLastNBitsFromValueHash(Math.abs(value.hashCode()), globalDepth);
         var bucket = getBucketByKey(key);
         if (bucket.exists(value)) {
             return key;
@@ -63,7 +63,7 @@ public class Directory<T> {
         var newBucketStorage = new ArrayList<T>();
 
         for (var element : tempBucketStorage) {
-            if (getLastNBitsFromValueHash(element.hashCode(), globalDepth) == previousBucketPosition) {
+            if (getLastNBitsFromValueHash(Math.abs(element.hashCode()), globalDepth) == previousBucketPosition) {
                 oldBucketStorage.add(element);
             } else {
                 newBucketStorage.add(element);
@@ -79,7 +79,7 @@ public class Directory<T> {
     }
 
     private void rebalanceBuckets(Bucket<T> previousBucket, int previousBucketPosition) {
-        if (buckets.length == MAX_BUCKETS) {
+        if (globalDepth == MAX_GLOBAL_DEPTH) {
             throw new OutOfMemoryError("Reached maximum number of buckets");
         }
         var newBuckets = new Bucket[buckets.length * 2];
