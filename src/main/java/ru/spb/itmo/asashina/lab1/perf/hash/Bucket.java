@@ -37,36 +37,49 @@ public class Bucket<T> {
             int hash = calculateKeyHash(key);
             elements[hash] = key;
         }
+    }
 
-//        var hasCollision = true;
-//        while (hasCollision) {
-//            aCoeff = RANDOM.nextInt(P - 1);
-//            bCoeff = RANDOM.nextInt(P);
-//
-//            var i = 0;
-//            for (var key : keys) {
-//                int hash = calculateKeyHash(key);
-//                if (elements[hash] == null) {
-//                    i++;
-//                    elements[hash] = key;
-//                    continue;
-//                }
-//                if (!elements[hash].equals(key)) {
-//                    break;
-//                }
-//                i++;
-//            }
-//            if (i == keys.size()) {
-//                hasCollision = false;
-//            } else {
-//                elements = (T[]) new Object[size];
-//            }
-//        }
+    /**
+     * Использует формулу, которая была описана в источниках. Сохранена до лучших времен.
+     * @param keys - ключи.
+     */
+    private void insertKeysV2(Collection<T> keys) {
+        var hasCollision = true;
+        while (hasCollision) {
+            aCoeff = RANDOM.nextInt(P - 1);
+            bCoeff = RANDOM.nextInt(P);
+
+            var i = 0;
+            for (var key : keys) {
+                int hash = calculateKeyHash(key);
+                if (elements[hash] == null) {
+                    i++;
+                    elements[hash] = key;
+                    continue;
+                }
+                if (!elements[hash].equals(key)) {
+                    break;
+                }
+                i++;
+            }
+            if (i == keys.size()) {
+                hasCollision = false;
+            } else {
+                elements = (T[]) new Object[size];
+            }
+        }
     }
 
     private int calculateKeyHash(T key) {
-//        return (int) ((((long) aCoeff * Math.abs(hashFunction.apply(key)) + bCoeff) % P) % size);
         return Math.abs(hashFunction.apply(key)) % size;
+    }
+
+    /**
+     * Использует формулу, которая была описана в источниках. Сохранена до лучших времен.
+     * @param key - ключ.
+     */
+    private int calculateKeyHashV2(T key) {
+        return (int) ((((long) aCoeff * Math.abs(hashFunction.apply(key)) + bCoeff) % P) % size);
     }
 
 }
