@@ -4,10 +4,13 @@ import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
 
 import java.io.IOException;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 @State(Scope.Benchmark)
 public class InsertBenchmarkRunner {
+
+    private static final Random RANDOM = new Random();
 
     private Directory<Integer> directory;
 
@@ -20,7 +23,7 @@ public class InsertBenchmarkRunner {
     public void insertTenThousandValues(Blackhole blackhole) {
         directory = new Directory<>(10_000);
         for (int i = 0; i < 10_000; i++) {
-            directory.insert(i);
+            directory.insert(RANDOM.nextInt(Integer.MAX_VALUE));
             blackhole.consume(i);
         }
     }
@@ -34,7 +37,7 @@ public class InsertBenchmarkRunner {
     public void insertMillionValues(Blackhole blackhole) {
         directory = new Directory<>(1_000_000);
         for (int i = 0; i < 1_000_000; i++) {
-            directory.insert(i);
+            directory.insert(RANDOM.nextInt(Integer.MAX_VALUE));
             blackhole.consume(i);
         }
     }
@@ -48,7 +51,7 @@ public class InsertBenchmarkRunner {
     public void insertTenMillionsValues(Blackhole blackhole) {
         directory = new Directory<>(10_000_000);
         for (int i = 0; i < 10_000_000; i++) {
-            directory.insert(i);
+            directory.insert(RANDOM.nextInt(Integer.MAX_VALUE));
             blackhole.consume(i);
         }
     }
@@ -62,7 +65,7 @@ public class InsertBenchmarkRunner {
     public void insertHundredMillionValues(Blackhole blackhole) {
         directory = new Directory<>(100_000_000);
         for (int i = 0; i < 100_000_000; i++) {
-            directory.insert(i);
+            directory.insert(RANDOM.nextInt(Integer.MAX_VALUE));
             blackhole.consume(i);
         }
     }

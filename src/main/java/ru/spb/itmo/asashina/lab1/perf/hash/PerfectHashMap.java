@@ -1,15 +1,13 @@
 package ru.spb.itmo.asashina.lab1.perf.hash;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.function.Function;
 
-public class PerfectHashMap<T> {
+public class PerfectHashMap<T, V> {
 
-    private Bucket<T>[] buckets;
-    private Function<T, Integer> hashFunction;
+    private final Bucket<T, V>[] buckets;
+    private final Function<T, Integer> hashFunction;
+    private final Map<T, Integer> keysToHashCodesCache = new HashMap<>();
 
     public PerfectHashMap(Set<T> keys, Function<T, Integer> hashFunction) {
         if (keys.isEmpty()) {
@@ -21,17 +19,34 @@ public class PerfectHashMap<T> {
     }
 
     public Integer getKeyNumber(T key) {
-        int hash = calculateKeyHash(key);
+        int hash = getKeyHash(key);
         if (buckets[hash] != null && buckets[hash].contains(key)) {
             return hash;
         }
         return null;
     }
 
+    public void insertValue(T key, V value) {
+        int hash = getKeyHash(key);
+        if (buckets[hash] != null) {
+            buckets[hash].insertValue(key, value);
+        } else {
+            throw new IllegalArgumentException("Map does not contain key " + key);
+        }
+    }
+
+    public V getValue(T key) {
+        int hash = getKeyHash(key);
+        if (buckets[hash] != null) {
+            return (V) buckets[hash].getValue(key);
+        }
+        throw new IllegalArgumentException("Map does not contain key " + key);
+    }
+
     private void insertKeys(Set<T> keys) {
         var hashToKeys = new HashMap<Integer, List<T>>();
         for (var key : keys) {
-            int hash = calculateKeyHash(key);
+            int hash = getKeyHash(key);
             var previousKeys = hashToKeys.getOrDefault(hash, new ArrayList<>());
             previousKeys.add(key);
             hashToKeys.put(hash, previousKeys);
@@ -42,8 +57,11 @@ public class PerfectHashMap<T> {
         }
     }
 
-    private int calculateKeyHash(T key) {
-        return Math.abs(key.hashCode()) % buckets.length;
+    private int getKeyHash(T key) {
+        if (!keysToHashCodesCache.containsKey(key)) {
+            keysToHashCodesCache.put(key, Math.abs(key.hashCode()) % buckets.length);
+        }
+        return keysToHashCodesCache.get(key);
     }
 
 }

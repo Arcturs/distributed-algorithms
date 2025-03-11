@@ -45,7 +45,7 @@ public class CreatingBenchmarkRunner {
             k++;
             tempValue /= Integer.MAX_VALUE;
         }
-        return (int) (value.hashCode() + k);
+        return value.hashCode() + k;
     }
 
 }

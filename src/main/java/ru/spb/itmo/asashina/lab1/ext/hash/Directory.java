@@ -1,6 +1,8 @@
 package ru.spb.itmo.asashina.lab1.ext.hash;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Logger;
 
 public class Directory<T> {
@@ -13,6 +15,7 @@ public class Directory<T> {
     private int nextBucketPosition;
 
     private final long bucketCapacity;
+    private final Map<T, Integer> valueToHashCodeCache = new HashMap<>();
 
     public Directory(long bucketCapacity) {
         this.bucketCapacity = bucketCapacity;
@@ -22,7 +25,8 @@ public class Directory<T> {
     }
 
     public void insert(T value) {
-        var key = getLastNBitsFromValueHash(Math.abs(value.hashCode()), globalDepth);
+        var valueHash = getHash(value);
+        var key = getLastNBitsFromValueHash(valueHash, globalDepth);
         var bucket = getBucketByKey(key);
         var result = bucket.insert(value);
         if (result) {
@@ -40,12 +44,20 @@ public class Directory<T> {
     }
 
     public Integer getKey(T value) {
-        var key = getLastNBitsFromValueHash(Math.abs(value.hashCode()), globalDepth);
+        var valueHash = getHash(value);
+        var key = getLastNBitsFromValueHash(valueHash, globalDepth);
         var bucket = getBucketByKey(key);
         if (bucket.exists(value)) {
             return key;
         }
         return null;
+    }
+
+    private int getHash(T value) {
+        if (!valueToHashCodeCache.containsKey(value)) {
+            valueToHashCodeCache.put(value, Math.abs(value.hashCode()));
+        }
+        return valueToHashCodeCache.get(value);
     }
 
     private Bucket<T> getBucketByKey(int key) {
