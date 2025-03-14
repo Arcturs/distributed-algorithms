@@ -38,7 +38,7 @@ public class PerfectHashMap<T, V> {
     public V getValue(T key) {
         int hash = getKeyHash(key);
         if (buckets[hash] != null) {
-            return (V) buckets[hash].getValue(key);
+            return buckets[hash].getValue(key);
         }
         throw new IllegalArgumentException("Map does not contain key " + key);
     }

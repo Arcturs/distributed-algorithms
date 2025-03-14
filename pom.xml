@@ -15,6 +15,7 @@
         <junit-jupiter-engine.version>5.11.4</junit-jupiter-engine.version>
         <jmh-core.version>1.37</jmh-core.version>
         <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
+        <easy-random.version>5.0.0</easy-random.version>
     </properties>
 
     <dependencies>
@@ -27,6 +28,11 @@
             <groupId>org.openjdk.jmh</groupId>
             <artifactId>jmh-generator-annprocess</artifactId>
             <version>${jmh-core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jeasy</groupId>
+            <artifactId>easy-random-core</artifactId>
+            <version>${easy-random.version}</version>
         </dependency>
 
         <dependency>

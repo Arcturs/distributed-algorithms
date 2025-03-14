@@ -31,6 +31,28 @@ class PerfectHashMapTest {
         assertEquals(1, perfectHashMap.getKeyNumber((long) Integer.MAX_VALUE * 4 + 7));
     }
 
+    @Test
+    void insertValuesToMapTest() {
+        var perfectHashMap = new PerfectHashMap<Integer, Integer>(Set.of(1, 2, 3, 4), Object::hashCode);
+        perfectHashMap.insertValue(1, 10);
+        perfectHashMap.insertValue(3, 30);
+
+        assertEquals(10, perfectHashMap.getValue(1));
+        assertEquals(30, perfectHashMap.getValue(3));
+    }
+
+    @Test
+    void insertValuesToMapWithCollisionsTest() {
+        var perfectHashMap = new PerfectHashMap<Long, Integer>(
+                Set.of(1L, (long) Integer.MAX_VALUE * 2 + 1, (long) Integer.MAX_VALUE * 4 + 7),
+                this::perfectLongHash);
+        perfectHashMap.insertValue(1L, 10);
+        perfectHashMap.insertValue((long) Integer.MAX_VALUE * 2 + 1, 30);
+
+        assertEquals(10, perfectHashMap.getValue(1L));
+        assertEquals(30, perfectHashMap.getValue((long) Integer.MAX_VALUE * 2 + 1));
+    }
+
     private int perfectLongHash(Long value) {
         var k = 0;
         var tempValue = value;
@@ -38,7 +60,7 @@ class PerfectHashMapTest {
             k++;
             tempValue /= Integer.MAX_VALUE;
         }
-        return (int) value.hashCode() + k;
+        return value.hashCode() + k;
     }
 
 }

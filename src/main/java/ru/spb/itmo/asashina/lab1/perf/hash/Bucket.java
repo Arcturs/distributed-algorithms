@@ -34,7 +34,7 @@ public class Bucket<T, V> {
 
     public boolean contains(T key) {
         int hash = getKeyHash(key);
-        return key.equals(keyElements[hash]);
+        return keyElements[hash] != null;
     }
 
     public void insertValue(T key, V value) {
