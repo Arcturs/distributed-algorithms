@@ -59,7 +59,7 @@ public class PerfectHashMap<T, V> {
 
     private int getKeyHash(T key) {
         if (!keysToHashCodesCache.containsKey(key)) {
-            keysToHashCodesCache.put(key, Math.abs(key.hashCode()) % buckets.length);
+            keysToHashCodesCache.put(key, Math.abs(key.hashCode() % buckets.length));
         }
         return keysToHashCodesCache.get(key);
     }

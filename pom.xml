@@ -16,6 +16,7 @@
         <jmh-core.version>1.37</jmh-core.version>
         <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
         <easy-random.version>5.0.0</easy-random.version>
+        <jqwik.version>1.9.2</jqwik.version>
     </properties>
 
     <dependencies>
@@ -39,6 +40,12 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <version>${junit-jupiter-engine.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.jqwik</groupId>
+            <artifactId>jqwik</artifactId>
+            <version>${jqwik.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
