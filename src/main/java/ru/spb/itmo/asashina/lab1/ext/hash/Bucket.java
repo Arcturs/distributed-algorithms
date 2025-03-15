@@ -3,6 +3,7 @@ package ru.spb.itmo.asashina.lab1.ext.hash;
 import java.io.BufferedOutputStream;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.EOFException;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -10,6 +11,7 @@ import java.nio.file.Path;
 import java.util.logging.Logger;
 
 import static java.nio.file.StandardOpenOption.APPEND;
+import static java.util.logging.Level.FINE;
 import static ru.spb.itmo.asashina.lab1.ext.hash.Directory.PARENT_DIRECTORY;
 
 public class Bucket<T> {
@@ -125,6 +127,8 @@ public class Bucket<T> {
                     break;
                 }
             }
+        } catch (EOFException e) {
+            log.log(FINE,"Reading is over");
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

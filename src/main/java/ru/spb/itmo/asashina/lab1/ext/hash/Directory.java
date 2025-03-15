@@ -5,8 +5,10 @@ import org.apache.commons.io.FileUtils;
 import java.io.BufferedOutputStream;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.EOFException;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -17,6 +19,7 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 import static java.nio.file.StandardOpenOption.APPEND;
+import static java.util.logging.Level.FINE;
 
 public class Directory<T> {
 
@@ -48,6 +51,9 @@ public class Directory<T> {
         var valueHash = getHash(value);
         var key = getLastNBitsFromValueHash(valueHash, globalDepth);
         var bucket = getBucketByKey(key);
+        if (bucket == null) {
+            throw new RuntimeException("Bucket with key does not exist, something is wrong");
+        }
         var result = bucket.insert(value, key);
         if (result) {
             return;
@@ -85,7 +91,14 @@ public class Directory<T> {
             return buckets[key];
         }
 
-        return buckets[getLastNBitsFromValueHash(key, globalDepth - 1)];
+        var tempDepth = globalDepth - 1;
+        while(tempDepth != 0) {
+            if (buckets[getLastNBitsFromValueHash(key, tempDepth)] != null) {
+                return buckets[getLastNBitsFromValueHash(key, tempDepth)];
+            }
+            tempDepth--;
+        }
+        return null;
     }
 
     private void addNewBucket(Bucket<T> previousBucket, int previousBucketPosition) {
@@ -129,7 +142,10 @@ public class Directory<T> {
             }
             Files.move(tempFile, FileUtils.getFile(previousBucketFileName).toPath(), StandardCopyOption.REPLACE_EXISTING);
             Files.delete(readFile);
-        } catch (Exception e) {
+        } catch (EOFException e) {
+            log.log(FINE,"Reading is over");
+        }
+        catch (Exception e) {
             throw new RuntimeException(e);
         }
 

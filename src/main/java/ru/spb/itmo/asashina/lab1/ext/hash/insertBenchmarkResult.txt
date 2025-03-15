@@ -1,206 +1,206 @@
-/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=57367:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/a.sashina/IdeaProjects/distributed-algorithms/target/classes:/Users/a.sashina/.m2/repository/org/openjdk/jmh/jmh-core/1.37/jmh-core-1.37.jar:/Users/a.sashina/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/Users/a.sashina/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/Users/a.sashina/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.37/jmh-generator-annprocess-1.37.jar:/Users/a.sashina/.m2/repository/org/jeasy/easy-random-core/5.0.0/easy-random-core-5.0.0.jar:/Users/a.sashina/.m2/repository/org/objenesis/objenesis/3.1/objenesis-3.1.jar:/Users/a.sashina/.m2/repository/io/github/classgraph/classgraph/4.8.90/classgraph-4.8.90.jar ru.spb.itmo.asashina.lab1.ext.hash.InsertBenchmarkRunner
+/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=50888:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/a.sashina/IdeaProjects/distributed-algorithms/target/classes:/Users/a.sashina/.m2/repository/org/openjdk/jmh/jmh-core/1.37/jmh-core-1.37.jar:/Users/a.sashina/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/Users/a.sashina/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/Users/a.sashina/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.37/jmh-generator-annprocess-1.37.jar:/Users/a.sashina/.m2/repository/org/jeasy/easy-random-core/5.0.0/easy-random-core-5.0.0.jar:/Users/a.sashina/.m2/repository/org/objenesis/objenesis/3.1/objenesis-3.1.jar:/Users/a.sashina/.m2/repository/io/github/classgraph/classgraph/4.8.90/classgraph-4.8.90.jar:/Users/a.sashina/.m2/repository/commons-io/commons-io/2.17.0/commons-io-2.17.0.jar ru.spb.itmo.asashina.lab1.ext.hash.InsertBenchmarkRunner
 # JMH version: 1.37
 # VM version: JDK 17.0.6, OpenJDK 64-Bit Server VM, 17.0.6+10
 # VM invoker: /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java
-# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=57367:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=50888:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
 # Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
 # Warmup: 3 iterations, 1 s each
 # Measurement: 10 iterations, 1 s each
 # Timeout: 10 min per iteration
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Average time, time/op
-# Benchmark: ru.spb.itmo.asashina.lab1.ext.hash.InsertBenchmarkRunner.insertFiveMillionsValues
+# Benchmark: ru.spb.itmo.asashina.lab1.ext.hash.InsertBenchmarkRunner.insertFifteenThousandValues
 
 # Run progress: 0,00% complete, ETA 00:01:57
 # Warmup Fork: 1 of 1
-# Warmup Iteration   1: 1688,644 ms/op
-# Warmup Iteration   2: 1691,244 ms/op
-# Warmup Iteration   3: 1805,690 ms/op
-Iteration   1: 1594,686 ms/op
-Iteration   2: 1818,814 ms/op
-Iteration   3: 1794,155 ms/op
-Iteration   4: 1528,168 ms/op
-Iteration   5: 1660,768 ms/op
-Iteration   6: 1591,874 ms/op
-Iteration   7: 3534,647 ms/op
-Iteration   8: 5384,396 ms/op
-Iteration   9: 3932,608 ms/op
-Iteration  10: 1819,453 ms/op
+# Warmup Iteration   1: 10067,136 ms/op
+# Warmup Iteration   2: 10096,470 ms/op
+# Warmup Iteration   3: 8757,661 ms/op
+Iteration   1: 9034,630 ms/op
+Iteration   2: 8593,010 ms/op
+Iteration   3: 9134,474 ms/op
+Iteration   4: 9460,273 ms/op
+Iteration   5: 10064,924 ms/op
+Iteration   6: 9401,126 ms/op
+Iteration   7: 8617,501 ms/op
+Iteration   8: 9572,344 ms/op
+Iteration   9: 9150,158 ms/op
+Iteration  10: 9012,138 ms/op
 
-# Run progress: 11,11% complete, ETA 00:04:06
+# Run progress: 11,11% complete, ETA 00:16:16
 # Fork: 1 of 2
-# Warmup Iteration   1: 1649,557 ms/op
-# Warmup Iteration   2: 3579,742 ms/op
-# Warmup Iteration   3: 3764,537 ms/op
-Iteration   1: 1862,076 ms/op
-Iteration   2: 2078,512 ms/op
-Iteration   3: 1730,361 ms/op
-Iteration   4: 1767,866 ms/op
-Iteration   5: 1742,368 ms/op
-Iteration   6: 1851,182 ms/op
-Iteration   7: 1579,162 ms/op
-Iteration   8: 1737,927 ms/op
-Iteration   9: 1755,284 ms/op
-Iteration  10: 1782,551 ms/op
+# Warmup Iteration   1: 9503,611 ms/op
+# Warmup Iteration   2: 8428,190 ms/op
+# Warmup Iteration   3: 9001,481 ms/op
+Iteration   1: 9300,635 ms/op
+Iteration   2: 9031,939 ms/op
+Iteration   3: 9506,025 ms/op
+Iteration   4: 9398,909 ms/op
+Iteration   5: 9215,816 ms/op
+Iteration   6: 10251,529 ms/op
+Iteration   7: 11062,594 ms/op
+Iteration   8: 10598,593 ms/op
+Iteration   9: 9497,695 ms/op
+Iteration  10: 10239,903 ms/op
 
-# Run progress: 22,22% complete, ETA 00:03:24
+# Run progress: 22,22% complete, ETA 00:14:27
 # Fork: 2 of 2
-# Warmup Iteration   1: 1572,001 ms/op
-# Warmup Iteration   2: 1655,936 ms/op
-# Warmup Iteration   3: 1892,403 ms/op
-Iteration   1: 1762,247 ms/op
-Iteration   2: 1909,759 ms/op
-Iteration   3: 1875,961 ms/op
-Iteration   4: 1638,510 ms/op
-Iteration   5: 1715,535 ms/op
-Iteration   6: 1889,025 ms/op
-Iteration   7: 1761,777 ms/op
-Iteration   8: 1602,941 ms/op
-Iteration   9: 1828,681 ms/op
-Iteration  10: 1666,894 ms/op
+# Warmup Iteration   1: 10092,691 ms/op
+# Warmup Iteration   2: 8749,629 ms/op
+# Warmup Iteration   3: 8541,512 ms/op
+Iteration   1: 9038,168 ms/op
+Iteration   2: 9394,274 ms/op
+Iteration   3: 9695,442 ms/op
+Iteration   4: 9928,117 ms/op
+Iteration   5: 9665,737 ms/op
+Iteration   6: 9325,436 ms/op
+Iteration   7: 9772,525 ms/op
+Iteration   8: 9023,180 ms/op
+Iteration   9: 9461,036 ms/op
+Iteration  10: 9844,249 ms/op
 
 
-Result "ru.spb.itmo.asashina.lab1.ext.hash.InsertBenchmarkRunner.insertFiveMillionsValues":
-  1776,931 ±(99.9%) 100,941 ms/op [Average]
-  (min, avg, max) = (1579,162, 1776,931, 2078,512), stdev = 116,244
-  CI (99.9%): [1675,990, 1877,873] (assumes normal distribution)
+Result "ru.spb.itmo.asashina.lab1.ext.hash.InsertBenchmarkRunner.insertFifteenThousandValues":
+  9662,590 ±(99.9%) 467,520 ms/op [Average]
+  (min, avg, max) = (9023,180, 9662,590, 11062,594), stdev = 538,396
+  CI (99.9%): [9195,071, 10130,110] (assumes normal distribution)
 
 
 # JMH version: 1.37
 # VM version: JDK 17.0.6, OpenJDK 64-Bit Server VM, 17.0.6+10
 # VM invoker: /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java
-# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=57367:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=50888:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
 # Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
 # Warmup: 3 iterations, 1 s each
 # Measurement: 10 iterations, 1 s each
 # Timeout: 10 min per iteration
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Average time, time/op
-# Benchmark: ru.spb.itmo.asashina.lab1.ext.hash.InsertBenchmarkRunner.insertMillionValues
+# Benchmark: ru.spb.itmo.asashina.lab1.ext.hash.InsertBenchmarkRunner.insertFiveThousandValues
 
-# Run progress: 33,33% complete, ETA 00:02:44
+# Run progress: 33,33% complete, ETA 00:12:23
 # Warmup Fork: 1 of 1
-# Warmup Iteration   1: 264,220 ms/op
-# Warmup Iteration   2: 323,156 ms/op
-# Warmup Iteration   3: 303,986 ms/op
-Iteration   1: 306,035 ms/op
-Iteration   2: 309,207 ms/op
-Iteration   3: 346,917 ms/op
-Iteration   4: 305,572 ms/op
-Iteration   5: 310,670 ms/op
-Iteration   6: 299,898 ms/op
-Iteration   7: 337,165 ms/op
-Iteration   8: 314,419 ms/op
-Iteration   9: 352,767 ms/op
-Iteration  10: 334,076 ms/op
+# Warmup Iteration   1: 3400,020 ms/op
+# Warmup Iteration   2: 3228,941 ms/op
+# Warmup Iteration   3: 3296,792 ms/op
+Iteration   1: 3297,185 ms/op
+Iteration   2: 3146,954 ms/op
+Iteration   3: 3178,172 ms/op
+Iteration   4: 4156,418 ms/op
+Iteration   5: 3670,222 ms/op
+Iteration   6: 3100,774 ms/op
+Iteration   7: 3167,616 ms/op
+Iteration   8: 3706,016 ms/op
+Iteration   9: 3298,870 ms/op
+Iteration  10: 2988,157 ms/op
 
-# Run progress: 44,44% complete, ETA 00:02:03
+# Run progress: 44,44% complete, ETA 00:08:40
 # Fork: 1 of 2
-# Warmup Iteration   1: 316,892 ms/op
-# Warmup Iteration   2: 305,095 ms/op
-# Warmup Iteration   3: 315,482 ms/op
-Iteration   1: 353,019 ms/op
-Iteration   2: 303,468 ms/op
-Iteration   3: 330,915 ms/op
-Iteration   4: 302,257 ms/op
-Iteration   5: 303,719 ms/op
-Iteration   6: 312,186 ms/op
-Iteration   7: 346,482 ms/op
-Iteration   8: 274,667 ms/op
-Iteration   9: 320,455 ms/op
-Iteration  10: 316,949 ms/op
+# Warmup Iteration   1: 3925,607 ms/op
+# Warmup Iteration   2: 3461,876 ms/op
+# Warmup Iteration   3: 4095,308 ms/op
+Iteration   1: 3673,724 ms/op
+Iteration   2: 3157,520 ms/op
+Iteration   3: 3476,160 ms/op
+Iteration   4: 3200,437 ms/op
+Iteration   5: 3286,648 ms/op
+Iteration   6: 3457,965 ms/op
+Iteration   7: 3115,362 ms/op
+Iteration   8: 3846,987 ms/op
+Iteration   9: 3831,044 ms/op
+Iteration  10: 3446,455 ms/op
 
-# Run progress: 55,56% complete, ETA 00:01:32
+# Run progress: 55,56% complete, ETA 00:06:10
 # Fork: 2 of 2
-# Warmup Iteration   1: 279,348 ms/op
-# Warmup Iteration   2: 350,854 ms/op
-# Warmup Iteration   3: 346,760 ms/op
-Iteration   1: 353,506 ms/op
-Iteration   2: 295,110 ms/op
-Iteration   3: 308,854 ms/op
-Iteration   4: 298,136 ms/op
-Iteration   5: 303,824 ms/op
-Iteration   6: 292,091 ms/op
-Iteration   7: 314,168 ms/op
-Iteration   8: 291,335 ms/op
-Iteration   9: 282,483 ms/op
-Iteration  10: 292,420 ms/op
+# Warmup Iteration   1: 3512,092 ms/op
+# Warmup Iteration   2: 3765,798 ms/op
+# Warmup Iteration   3: 3874,658 ms/op
+Iteration   1: 3472,883 ms/op
+Iteration   2: 3718,774 ms/op
+Iteration   3: 3239,700 ms/op
+Iteration   4: 3721,107 ms/op
+Iteration   5: 3104,606 ms/op
+Iteration   6: 3025,306 ms/op
+Iteration   7: 3156,397 ms/op
+Iteration   8: 3103,449 ms/op
+Iteration   9: 3270,668 ms/op
+Iteration  10: 3305,791 ms/op
 
 
-Result "ru.spb.itmo.asashina.lab1.ext.hash.InsertBenchmarkRunner.insertMillionValues":
-  309,802 ±(99.9%) 19,127 ms/op [Average]
-  (min, avg, max) = (274,667, 309,802, 353,506), stdev = 22,027
-  CI (99.9%): [290,675, 328,930] (assumes normal distribution)
+Result "ru.spb.itmo.asashina.lab1.ext.hash.InsertBenchmarkRunner.insertFiveThousandValues":
+  3380,549 ±(99.9%) 226,530 ms/op [Average]
+  (min, avg, max) = (3025,306, 3380,549, 3846,987), stdev = 260,873
+  CI (99.9%): [3154,019, 3607,080] (assumes normal distribution)
 
 
 # JMH version: 1.37
 # VM version: JDK 17.0.6, OpenJDK 64-Bit Server VM, 17.0.6+10
 # VM invoker: /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java
-# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=57367:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=50888:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
 # Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
 # Warmup: 3 iterations, 1 s each
 # Measurement: 10 iterations, 1 s each
 # Timeout: 10 min per iteration
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Average time, time/op
-# Benchmark: ru.spb.itmo.asashina.lab1.ext.hash.InsertBenchmarkRunner.insertSevenHundredThousandValues
+# Benchmark: ru.spb.itmo.asashina.lab1.ext.hash.InsertBenchmarkRunner.insertThousandThousandValues
 
-# Run progress: 66,67% complete, ETA 00:01:05
+# Run progress: 66,67% complete, ETA 00:04:14
 # Warmup Fork: 1 of 1
-# Warmup Iteration   1: 191,916 ms/op
-# Warmup Iteration   2: 207,152 ms/op
-# Warmup Iteration   3: 201,904 ms/op
-Iteration   1: 284,976 ms/op
-Iteration   2: 178,354 ms/op
-Iteration   3: 243,536 ms/op
-Iteration   4: 207,652 ms/op
-Iteration   5: 204,995 ms/op
-Iteration   6: 186,945 ms/op
-Iteration   7: 220,790 ms/op
-Iteration   8: 176,572 ms/op
-Iteration   9: 228,306 ms/op
-Iteration  10: 200,933 ms/op
+# Warmup Iteration   1: 969,309 ms/op
+# Warmup Iteration   2: 839,143 ms/op
+# Warmup Iteration   3: 902,768 ms/op
+Iteration   1: 1438,941 ms/op
+Iteration   2: 1767,235 ms/op
+Iteration   3: 970,198 ms/op
+Iteration   4: 1389,065 ms/op
+Iteration   5: 1274,725 ms/op
+Iteration   6: 1306,135 ms/op
+Iteration   7: 1702,623 ms/op
+Iteration   8: 864,532 ms/op
+Iteration   9: 1361,521 ms/op
+Iteration  10: 889,366 ms/op
 
-# Run progress: 77,78% complete, ETA 00:00:42
+# Run progress: 77,78% complete, ETA 00:02:31
 # Fork: 1 of 2
-# Warmup Iteration   1: 191,600 ms/op
-# Warmup Iteration   2: 203,281 ms/op
-# Warmup Iteration   3: 204,307 ms/op
-Iteration   1: 214,009 ms/op
-Iteration   2: 221,161 ms/op
-Iteration   3: 215,952 ms/op
-Iteration   4: 207,108 ms/op
-Iteration   5: 239,559 ms/op
-Iteration   6: 193,321 ms/op
-Iteration   7: 213,546 ms/op
-Iteration   8: 202,303 ms/op
-Iteration   9: 186,752 ms/op
-Iteration  10: 231,855 ms/op
+# Warmup Iteration   1: 1182,959 ms/op
+# Warmup Iteration   2: 1269,563 ms/op
+# Warmup Iteration   3: 1645,089 ms/op
+Iteration   1: 1290,728 ms/op
+Iteration   2: 865,815 ms/op
+Iteration   3: 971,293 ms/op
+Iteration   4: 1370,134 ms/op
+Iteration   5: 800,107 ms/op
+Iteration   6: 1579,315 ms/op
+Iteration   7: 1015,602 ms/op
+Iteration   8: 800,734 ms/op
+Iteration   9: 935,643 ms/op
+Iteration  10: 745,415 ms/op
 
-# Run progress: 88,89% complete, ETA 00:00:20
+# Run progress: 88,89% complete, ETA 00:01:09
 # Fork: 2 of 2
-# Warmup Iteration   1: 209,885 ms/op
-# Warmup Iteration   2: 191,439 ms/op
-# Warmup Iteration   3: 203,164 ms/op
-Iteration   1: 205,276 ms/op
-Iteration   2: 197,820 ms/op
-Iteration   3: 213,037 ms/op
-Iteration   4: 178,428 ms/op
-Iteration   5: 183,923 ms/op
-Iteration   6: 177,472 ms/op
-Iteration   7: 188,313 ms/op
-Iteration   8: 214,324 ms/op
-Iteration   9: 200,960 ms/op
-Iteration  10: 167,576 ms/op
+# Warmup Iteration   1: 1190,537 ms/op
+# Warmup Iteration   2: 884,512 ms/op
+# Warmup Iteration   3: 830,584 ms/op
+Iteration   1: 814,973 ms/op
+Iteration   2: 1055,144 ms/op
+Iteration   3: 929,661 ms/op
+Iteration   4: 772,894 ms/op
+Iteration   5: 922,911 ms/op
+Iteration   6: 808,803 ms/op
+Iteration   7: 1099,316 ms/op
+Iteration   8: 1007,599 ms/op
+Iteration   9: 1297,169 ms/op
+Iteration  10: 1005,540 ms/op
 
 
-Result "ru.spb.itmo.asashina.lab1.ext.hash.InsertBenchmarkRunner.insertSevenHundredThousandValues":
-  202,635 ±(99.9%) 16,217 ms/op [Average]
-  (min, avg, max) = (167,576, 202,635, 239,559), stdev = 18,675
-  CI (99.9%): [186,418, 218,852] (assumes normal distribution)
+Result "ru.spb.itmo.asashina.lab1.ext.hash.InsertBenchmarkRunner.insertThousandThousandValues":
+  1004,440 ±(99.9%) 195,087 ms/op [Average]
+  (min, avg, max) = (745,415, 1004,440, 1579,315), stdev = 224,662
+  CI (99.9%): [809,353, 1199,527] (assumes normal distribution)
 
 
-# Run complete. Total time: 00:02:57
+# Run complete. Total time: 00:09:37
 
 REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
 why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
@@ -214,9 +214,9 @@ works, and factor in a small probability of new VM bugs. Additionally, while com
 different JVMs are already problematic, the performance difference caused by different Blackhole
 modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
 
-Benchmark                                               Mode  Cnt     Score     Error  Units
-InsertBenchmarkRunner.insertFiveMillionsValues          avgt   20  1776,931 ± 100,941  ms/op
-InsertBenchmarkRunner.insertMillionValues               avgt   20   309,802 ±  19,127  ms/op
-InsertBenchmarkRunner.insertSevenHundredThousandValues  avgt   20   202,635 ±  16,217  ms/op
+Benchmark                                           Mode  Cnt     Score     Error  Units
+InsertBenchmarkRunner.insertFifteenThousandValues   avgt   20  9662,590 ± 467,520  ms/op
+InsertBenchmarkRunner.insertFiveThousandValues      avgt   20  3380,549 ± 226,530  ms/op
+InsertBenchmarkRunner.insertThousandThousandValues  avgt   20  1004,440 ± 195,087  ms/op
 
 Process finished with exit code 0

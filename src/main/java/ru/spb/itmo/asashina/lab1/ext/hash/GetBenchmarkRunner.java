@@ -1,5 +1,6 @@
 package ru.spb.itmo.asashina.lab1.ext.hash;
 
+import org.apache.commons.io.FileUtils;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.BenchmarkMode;
 import org.openjdk.jmh.annotations.Fork;
@@ -18,6 +19,7 @@ import org.openjdk.jmh.runner.RunnerException;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
@@ -25,6 +27,8 @@ import java.util.List;
 import java.util.Random;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
+
+import static ru.spb.itmo.asashina.lab1.ext.hash.Directory.PARENT_DIRECTORY;
 
 @State(Scope.Benchmark)
 public class GetBenchmarkRunner {
@@ -35,27 +39,33 @@ public class GetBenchmarkRunner {
     private Set<Integer> data;
     private String currentBenchmark;
 
-    @Setup(Level.Iteration)
+    @Setup(Level.Invocation)
     public void setUp(BenchmarkParams params) {
+        try {
+            FileUtils.deleteDirectory(FileUtils.getFile(PARENT_DIRECTORY));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
         currentBenchmark = params.getBenchmark();
         List<Integer> collection = new ArrayList<>();
-        if (currentBenchmark.contains("Hundred")) {
-            directory = new Directory<>(100_000);
-            for (var i = 0; i < 100_000; i++) {
+        if (currentBenchmark.contains("Five")) {
+            directory = new Directory<>(1_000);
+            for (var i = 0; i < 5_000; i++) {
                 var value = RANDOM.nextInt(Integer.MAX_VALUE);
                 collection.add(value);
                 directory.insert(value);
             }
-        } else if (currentBenchmark.endsWith("Seventy")) {
-            directory = new Directory<>(75_000);
-            for (var i = 0; i < 75_000; i++) {
+        } else if (currentBenchmark.endsWith("Thousand")) {
+            directory = new Directory<>(75);
+            for (var i = 0; i < 1_000; i++) {
                 var value = RANDOM.nextInt(Integer.MAX_VALUE);
                 collection.add(value);
                 directory.insert(value);
             }
         } else {
-            directory = new Directory<>(25_000);
-            for (var i = 0; i < 25_000; i++) {
+            directory = new Directory<>(50);
+            for (var i = 0; i < 750; i++) {
                 var value = RANDOM.nextInt(Integer.MAX_VALUE);
                 collection.add(value);
                 directory.insert(value);
@@ -71,7 +81,7 @@ public class GetBenchmarkRunner {
     @Warmup(iterations = 3, time = 1)
     @Measurement(iterations = 10, time = 1)
     @Fork(value = 2, warmups = 1)
-    public void getHundredThousandValues(Blackhole blackhole) {
+    public void getThousandValues(Blackhole blackhole) {
         for (var value : data) {
             var key = directory.getKey(value);
             blackhole.consume(key);
@@ -84,7 +94,7 @@ public class GetBenchmarkRunner {
     @Warmup(iterations = 3, time = 1)
     @Measurement(iterations = 10, time = 1)
     @Fork(value = 2, warmups = 1)
-    public void getSevenThousandValues(Blackhole blackhole) {
+    public void getFiveThousandValues(Blackhole blackhole) {
         for (var value : data) {
             var key = directory.getKey(value);
             blackhole.consume(key);
@@ -97,7 +107,7 @@ public class GetBenchmarkRunner {
     @Warmup(iterations = 3, time = 1)
     @Measurement(iterations = 10, time = 1)
     @Fork(value = 2, warmups = 1)
-    public void getTwentyThousandValues(Blackhole blackhole) {
+    public void getSevenHundredValues(Blackhole blackhole) {
         for (var value : data) {
             var key = directory.getKey(value);
             blackhole.consume(key);
