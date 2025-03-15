@@ -1,11 +1,29 @@
 package ru.spb.itmo.asashina.lab1.ext.hash;
 
+import org.apache.commons.io.FileUtils;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static ru.spb.itmo.asashina.lab1.ext.hash.Directory.PARENT_DIRECTORY;
 
 class DirectoryTest {
+
+    @AfterEach
+    @BeforeEach
+    void tearDown() {
+        try {
+            FileUtils.deleteDirectory(FileUtils.getFile(PARENT_DIRECTORY));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     @Test
     void addValueTest() {
