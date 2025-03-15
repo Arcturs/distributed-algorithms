@@ -30,26 +30,27 @@ public class LSHBenchmarkRunner {
 
     private static final EasyRandom EASY_RANDOM = new EasyRandom(
             new EasyRandomParameters()
-                    .stringLengthRange(10, 10_000)
+                    .stringLengthRange(10, 100)
                     .seed(new Date().getTime()));
 
-    private final Set<String> data = new HashSet<>();
+    private Set<String> data;
 
     private String currentBenchmark;
 
     @Setup(Level.Iteration)
     public void setUp(BenchmarkParams params) {
         currentBenchmark = params.getBenchmark();
-        if (currentBenchmark.contains("Hundred")) {
-            for (var i = 0; i < 100_000; i++) {
+        data = new HashSet<>();
+        if (currentBenchmark.contains("Seven")) {
+            for (var i = 0; i < 750; i++) {
                 data.add(EASY_RANDOM.nextObject(String.class));
             }
-        } else if (currentBenchmark.endsWith("Ten")) {
-            for (var i = 0; i < 10_000; i++) {
+        } else if (currentBenchmark.endsWith("Five")) {
+            for (var i = 0; i < 500; i++) {
                 data.add(EASY_RANDOM.nextObject(String.class));
             }
         } else {
-            for (var i = 0; i < 1_000; i++) {
+            for (var i = 0; i < 250; i++) {
                 data.add(EASY_RANDOM.nextObject(String.class));
             }
         }
@@ -57,34 +58,34 @@ public class LSHBenchmarkRunner {
 
     @Benchmark
     @BenchmarkMode(Mode.AverageTime)
-    @OutputTimeUnit(TimeUnit.NANOSECONDS)
+    @OutputTimeUnit(TimeUnit.MILLISECONDS)
     @Warmup(iterations = 3, time = 1)
     @Measurement(iterations = 10, time = 1)
     @Fork(value = 2, warmups = 1)
-    public void insertThousandRandomData(Blackhole blackhole) {
-        var processor = new SimilarSentencesProcessor(data, 5, 10, 5);
+    public void insertSevenHundredRandomData(Blackhole blackhole) {
+        var processor = new SimilarSentencesProcessor(data, 8, 100, 20);
         blackhole.consume(processor);
     }
 
     @Benchmark
     @BenchmarkMode(Mode.AverageTime)
-    @OutputTimeUnit(TimeUnit.NANOSECONDS)
+    @OutputTimeUnit(TimeUnit.MILLISECONDS)
     @Warmup(iterations = 3, time = 1)
     @Measurement(iterations = 10, time = 1)
     @Fork(value = 2, warmups = 1)
-    public void insertTenThousandRandomData(Blackhole blackhole) {
-        var processor = new SimilarSentencesProcessor(data, 5, 10, 5);
+    public void insertFiveHundredRandomData(Blackhole blackhole) {
+        var processor = new SimilarSentencesProcessor(data, 8, 100, 20);
         blackhole.consume(processor);
     }
 
     @Benchmark
     @BenchmarkMode(Mode.AverageTime)
-    @OutputTimeUnit(TimeUnit.NANOSECONDS)
+    @OutputTimeUnit(TimeUnit.MILLISECONDS)
     @Warmup(iterations = 3, time = 1)
     @Measurement(iterations = 10, time = 1)
     @Fork(value = 2, warmups = 1)
-    public void insertHundredThousandRandomData(Blackhole blackhole) {
-        var processor = new SimilarSentencesProcessor(data, 5, 10, 5);
+    public void insertTwoHundredRandomData(Blackhole blackhole) {
+        var processor = new SimilarSentencesProcessor(data, 8, 100, 20);
         blackhole.consume(processor);
     }
 

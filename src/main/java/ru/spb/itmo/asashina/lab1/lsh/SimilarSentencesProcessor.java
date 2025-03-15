@@ -36,6 +36,7 @@ public class SimilarSentencesProcessor {
         this.k = k;
         this.resolution = resolution;
         this.bands = bands;
+        findCandidates();
     }
 
     public List<Pair<Integer, Integer>> getFirstNSimilarSentences(int n) {

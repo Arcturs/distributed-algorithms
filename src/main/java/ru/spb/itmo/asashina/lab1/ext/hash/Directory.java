@@ -75,7 +75,7 @@ public class Directory<T> {
         var newBucketStorage = new ArrayList<T>();
 
         for (var element : tempBucketStorage) {
-            if (getLastNBitsFromValueHash(Math.abs(element.hashCode()), globalDepth) == previousBucketPosition) {
+            if (getLastNBitsFromValueHash(valueToHashCodeCache.get(element), globalDepth) == previousBucketPosition) {
                 oldBucketStorage.add(element);
             } else {
                 newBucketStorage.add(element);
