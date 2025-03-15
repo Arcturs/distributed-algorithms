@@ -43,12 +43,12 @@ public class GetValueBenchmarkRunner {
             for (var i = 0; i < 1_000_000; i++) {
                 collection.add(RANDOM.nextLong(Long.MAX_VALUE));
             }
-        } else if (currentBenchmark.endsWith("Hundred")) {
-            for (var i = 0; i < 100_000; i++) {
+        } else if (currentBenchmark.endsWith("Seven")) {
+            for (var i = 0; i < 750_000; i++) {
                 collection.add(RANDOM.nextLong(Long.MAX_VALUE));
             }
         } else {
-            for (var i = 0; i < 1_000; i++) {
+            for (var i = 0; i < 250_000; i++) {
                 collection.add(RANDOM.nextLong(Long.MAX_VALUE));
             }
         }
@@ -66,7 +66,7 @@ public class GetValueBenchmarkRunner {
     @Warmup(iterations = 3, time = 1)
     @Measurement(iterations = 10, time = 1)
     @Fork(value = 2, warmups = 1)
-    public void getTenThousandRandomData(Blackhole blackhole) {
+    public void getTwoHundredThousandRandomData(Blackhole blackhole) {
         for (var key : data) {
             var value = perfectHashMap.getValue(key);
             blackhole.consume(value);
@@ -79,7 +79,7 @@ public class GetValueBenchmarkRunner {
     @Warmup(iterations = 3, time = 1)
     @Measurement(iterations = 10, time = 1)
     @Fork(value = 2, warmups = 1)
-    public void getHundredThousandRandomData(Blackhole blackhole) {
+    public void getSevenHundredThousandRandomData(Blackhole blackhole) {
         for (var key : data) {
             var value = perfectHashMap.getValue(key);
             blackhole.consume(value);

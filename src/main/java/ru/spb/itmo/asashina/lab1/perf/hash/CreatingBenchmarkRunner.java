@@ -29,12 +29,12 @@ public class CreatingBenchmarkRunner {
             for (var i = 0; i < 1_000_000; i++) {
                 data.add(RANDOM.nextLong(Long.MAX_VALUE));
             }
-        } else if (currentBenchmark.endsWith("Hundred")) {
-            for (var i = 0; i < 100_000; i++) {
+        } else if (currentBenchmark.endsWith("Five")) {
+            for (var i = 0; i < 500_000; i++) {
                 data.add(RANDOM.nextLong(Long.MAX_VALUE));
             }
         } else {
-            for (var i = 0; i < 10_000; i++) {
+            for (var i = 0; i < 100_000; i++) {
                 data.add(RANDOM.nextLong(Long.MAX_VALUE));
             }
         }
@@ -46,7 +46,7 @@ public class CreatingBenchmarkRunner {
     @Warmup(iterations = 3, time = 1)
     @Measurement(iterations = 10, time = 1)
     @Fork(value = 2, warmups = 1)
-    public void insertTenThousandRandomData(Blackhole blackhole) {
+    public void insertHundredThousandRandomData(Blackhole blackhole) {
         var perfectHashMap = new PerfectHashMap<>(data, this::perfectLongHash);
         blackhole.consume(perfectHashMap);
     }
@@ -57,7 +57,7 @@ public class CreatingBenchmarkRunner {
     @Warmup(iterations = 3, time = 1)
     @Measurement(iterations = 10, time = 1)
     @Fork(value = 2, warmups = 1)
-    public void insertHundredThousandRandomData(Blackhole blackhole) {
+    public void insertFiveHundredThousandRandomData(Blackhole blackhole) {
         var perfectHashMap = new PerfectHashMap<>(data, this::perfectLongHash);
         blackhole.consume(perfectHashMap);
     }

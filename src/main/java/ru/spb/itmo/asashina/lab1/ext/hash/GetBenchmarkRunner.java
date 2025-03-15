@@ -46,16 +46,16 @@ public class GetBenchmarkRunner {
                 collection.add(value);
                 directory.insert(value);
             }
-        } else if (currentBenchmark.endsWith("Ten")) {
-            directory = new Directory<>(10_000);
-            for (var i = 0; i < 10_000; i++) {
+        } else if (currentBenchmark.endsWith("Seventy")) {
+            directory = new Directory<>(75_000);
+            for (var i = 0; i < 75_000; i++) {
                 var value = RANDOM.nextInt(Integer.MAX_VALUE);
                 collection.add(value);
                 directory.insert(value);
             }
         } else {
-            directory = new Directory<>(1_000);
-            for (var i = 0; i < 1_000; i++) {
+            directory = new Directory<>(25_000);
+            for (var i = 0; i < 25_000; i++) {
                 var value = RANDOM.nextInt(Integer.MAX_VALUE);
                 collection.add(value);
                 directory.insert(value);
@@ -71,33 +71,33 @@ public class GetBenchmarkRunner {
     @Warmup(iterations = 3, time = 1)
     @Measurement(iterations = 10, time = 1)
     @Fork(value = 2, warmups = 1)
-    public void getThousandValues(Blackhole blackhole) {
-        for (var value : data) {
-            var key = directory.getKey(value);
-            blackhole.consume(key);
-        }
-    }
-
-    @Benchmark
-    @BenchmarkMode(Mode.AverageTime)
-    @OutputTimeUnit(TimeUnit.MILLISECONDS)
-    @Warmup(iterations = 3, time = 1)
-    @Measurement(iterations = 10, time = 1)
-    @Fork(value = 2, warmups = 1)
-    public void getTenThousandValues(Blackhole blackhole) {
-        for (var value : data) {
-            var key = directory.getKey(value);
-            blackhole.consume(key);
-        }
-    }
-
-    @Benchmark
-    @BenchmarkMode(Mode.AverageTime)
-    @OutputTimeUnit(TimeUnit.MILLISECONDS)
-    @Warmup(iterations = 3, time = 1)
-    @Measurement(iterations = 10, time = 1)
-    @Fork(value = 2, warmups = 1)
     public void getHundredThousandValues(Blackhole blackhole) {
+        for (var value : data) {
+            var key = directory.getKey(value);
+            blackhole.consume(key);
+        }
+    }
+
+    @Benchmark
+    @BenchmarkMode(Mode.AverageTime)
+    @OutputTimeUnit(TimeUnit.MILLISECONDS)
+    @Warmup(iterations = 3, time = 1)
+    @Measurement(iterations = 10, time = 1)
+    @Fork(value = 2, warmups = 1)
+    public void getSevenThousandValues(Blackhole blackhole) {
+        for (var value : data) {
+            var key = directory.getKey(value);
+            blackhole.consume(key);
+        }
+    }
+
+    @Benchmark
+    @BenchmarkMode(Mode.AverageTime)
+    @OutputTimeUnit(TimeUnit.MILLISECONDS)
+    @Warmup(iterations = 3, time = 1)
+    @Measurement(iterations = 10, time = 1)
+    @Fork(value = 2, warmups = 1)
+    public void getTwentyThousandValues(Blackhole blackhole) {
         for (var value : data) {
             var key = directory.getKey(value);
             blackhole.consume(key);
