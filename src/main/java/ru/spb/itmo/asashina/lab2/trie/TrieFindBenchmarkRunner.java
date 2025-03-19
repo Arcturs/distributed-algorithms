@@ -20,13 +20,16 @@ import org.openjdk.jmh.runner.RunnerException;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 @State(Scope.Thread)
-public class TrieInsertBenchmarkRunner {
+public class TrieFindBenchmarkRunner {
 
     private static final EasyRandom EASY_RANDOM = new EasyRandom(
             new EasyRandomParameters()
@@ -41,28 +44,40 @@ public class TrieInsertBenchmarkRunner {
     public void setUp(BenchmarkParams params) {
         currentBenchmark = params.getBenchmark();
         trie = new Trie();
-        data = new HashSet<>();
+        List<String> collection = new ArrayList<>();
         if (currentBenchmark.contains("OneRandom")) {
             for (var i = 0; i < 1; i++) {
-                data.add(EASY_RANDOM.nextObject(String.class));
+                var value = EASY_RANDOM.nextObject(String.class);
+                collection.add(value);
+                trie.insert(value);
             }
         } else if (currentBenchmark.contains("Fifty")) {
             for (var i = 0; i < 50; i++) {
-                data.add(EASY_RANDOM.nextObject(String.class));
+                var value = EASY_RANDOM.nextObject(String.class);
+                collection.add(value);
+                trie.insert(value);
             }
         } else if (currentBenchmark.contains("OneThousand")) {
             for (var i = 0; i < 1_000; i++) {
-                data.add(EASY_RANDOM.nextObject(String.class));
+                var value = EASY_RANDOM.nextObject(String.class);
+                collection.add(value);
+                trie.insert(value);
             }
         } else if (currentBenchmark.contains("Five")) {
             for (var i = 0; i < 5_000; i++) {
-                data.add(EASY_RANDOM.nextObject(String.class));
+                var value = EASY_RANDOM.nextObject(String.class);
+                collection.add(value);
+                trie.insert(value);
             }
         } else {
             for (var i = 0; i < 15_000; i++) {
-                data.add(EASY_RANDOM.nextObject(String.class));
+                var value = EASY_RANDOM.nextObject(String.class);
+                collection.add(value);
+                trie.insert(value);
             }
         }
+        Collections.shuffle(collection);
+        data = new HashSet<>(collection);
     }
 
     @Benchmark
@@ -71,11 +86,11 @@ public class TrieInsertBenchmarkRunner {
     @Warmup(iterations = 3, time = 1)
     @Measurement(iterations = 10, time = 1)
     @Fork(value = 2, warmups = 1)
-    public void insertOneRandomData(Blackhole blackhole) {
+    public void getOneRandomData(Blackhole blackhole) {
         for (var sentence : data) {
-            trie.insert(sentence);
+            var result = trie.containsWord(sentence);
+            blackhole.consume(result);
         }
-        blackhole.consume(trie);
     }
 
     @Benchmark
@@ -84,11 +99,11 @@ public class TrieInsertBenchmarkRunner {
     @Warmup(iterations = 3, time = 1)
     @Measurement(iterations = 10, time = 1)
     @Fork(value = 2, warmups = 1)
-    public void insertFiftyRandomData(Blackhole blackhole) {
+    public void getFiftyRandomData(Blackhole blackhole) {
         for (var sentence : data) {
-            trie.insert(sentence);
+            var result = trie.containsWord(sentence);
+            blackhole.consume(result);
         }
-        blackhole.consume(trie);
     }
 
     @Benchmark
@@ -97,11 +112,11 @@ public class TrieInsertBenchmarkRunner {
     @Warmup(iterations = 3, time = 1)
     @Measurement(iterations = 10, time = 1)
     @Fork(value = 2, warmups = 1)
-    public void insertOneThousandRandomData(Blackhole blackhole) {
+    public void getOneThousandRandomData(Blackhole blackhole) {
         for (var sentence : data) {
-            trie.insert(sentence);
+            var result = trie.containsWord(sentence);
+            blackhole.consume(result);
         }
-        blackhole.consume(trie);
     }
 
     @Benchmark
@@ -110,11 +125,11 @@ public class TrieInsertBenchmarkRunner {
     @Warmup(iterations = 3, time = 1)
     @Measurement(iterations = 10, time = 1)
     @Fork(value = 2, warmups = 1)
-    public void insertFiveThousandRandomData(Blackhole blackhole) {
+    public void getFiveThousandRandomData(Blackhole blackhole) {
         for (var sentence : data) {
-            trie.insert(sentence);
+            var result = trie.containsWord(sentence);
+            blackhole.consume(result);
         }
-        blackhole.consume(trie);
     }
 
     @Benchmark
@@ -123,16 +138,16 @@ public class TrieInsertBenchmarkRunner {
     @Warmup(iterations = 3, time = 1)
     @Measurement(iterations = 10, time = 1)
     @Fork(value = 2, warmups = 1)
-    public void insertFifteenThousandRandomData(Blackhole blackhole) {
+    public void getFifteenThousandRandomData(Blackhole blackhole) {
         for (var sentence : data) {
-            trie.insert(sentence);
+            var result = trie.containsWord(sentence);
+            blackhole.consume(result);
         }
-        blackhole.consume(trie);
     }
 
     public static void main(String[] args) throws RunnerException {
         Options opt = new OptionsBuilder()
-                .include(TrieInsertBenchmarkRunner.class.getSimpleName())
+                .include(TrieFindBenchmarkRunner.class.getSimpleName())
                 .build();
         new Runner(opt).run();
     }

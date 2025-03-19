@@ -2,7 +2,6 @@ package ru.spb.itmo.asashina.lab1.ext.hash;
 
 import java.util.Random;
 
-// TODO: Обновить бенчмарки
 public class ProfilerRunner {
 
     private static final Random RANDOM = new Random();

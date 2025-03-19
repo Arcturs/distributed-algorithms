@@ -1,0 +1,358 @@
+/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=60725:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/a.sashina/IdeaProjects/distributed-algorithms/target/classes:/Users/a.sashina/.m2/repository/org/openjdk/jmh/jmh-core/1.37/jmh-core-1.37.jar:/Users/a.sashina/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/Users/a.sashina/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/Users/a.sashina/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.37/jmh-generator-annprocess-1.37.jar:/Users/a.sashina/.m2/repository/org/jeasy/easy-random-core/5.0.0/easy-random-core-5.0.0.jar:/Users/a.sashina/.m2/repository/org/objenesis/objenesis/3.1/objenesis-3.1.jar:/Users/a.sashina/.m2/repository/io/github/classgraph/classgraph/4.8.90/classgraph-4.8.90.jar:/Users/a.sashina/.m2/repository/commons-io/commons-io/2.17.0/commons-io-2.17.0.jar ru.spb.itmo.asashina.lab2.trie.TrieInsertBenchmarkRunner
+# JMH version: 1.37
+# VM version: JDK 17.0.6, OpenJDK 64-Bit Server VM, 17.0.6+10
+# VM invoker: /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=60725:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab2.trie.TrieInsertBenchmarkRunner.insertFifteenThousandRandomData
+
+# Run progress: 0,00% complete, ETA 00:03:15
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 388,952 ms/op
+# Warmup Iteration   2: 543,590 ms/op
+# Warmup Iteration   3: 537,050 ms/op
+Iteration   1: 219,887 ms/op
+Iteration   2: 296,427 ms/op
+Iteration   3: 280,807 ms/op
+Iteration   4: 365,711 ms/op
+Iteration   5: 261,503 ms/op
+Iteration   6: 336,571 ms/op
+Iteration   7: 278,532 ms/op
+Iteration   8: 265,192 ms/op
+Iteration   9: 257,176 ms/op
+Iteration  10: 278,719 ms/op
+
+# Run progress: 6,67% complete, ETA 00:03:58
+# Fork: 1 of 2
+# Warmup Iteration   1: 522,418 ms/op
+# Warmup Iteration   2: 521,139 ms/op
+# Warmup Iteration   3: 572,910 ms/op
+Iteration   1: 225,635 ms/op
+Iteration   2: 265,100 ms/op
+Iteration   3: 260,924 ms/op
+Iteration   4: 255,938 ms/op
+Iteration   5: 279,178 ms/op
+Iteration   6: 259,230 ms/op
+Iteration   7: 259,218 ms/op
+Iteration   8: 225,797 ms/op
+Iteration   9: 343,604 ms/op
+Iteration  10: 201,819 ms/op
+
+# Run progress: 13,33% complete, ETA 00:03:40
+# Fork: 2 of 2
+# Warmup Iteration   1: 534,753 ms/op
+# Warmup Iteration   2: 361,944 ms/op
+# Warmup Iteration   3: 357,373 ms/op
+Iteration   1: 229,956 ms/op
+Iteration   2: 294,668 ms/op
+Iteration   3: 279,171 ms/op
+Iteration   4: 276,925 ms/op
+Iteration   5: 273,833 ms/op
+Iteration   6: 255,623 ms/op
+Iteration   7: 272,551 ms/op
+Iteration   8: 219,510 ms/op
+Iteration   9: 272,417 ms/op
+Iteration  10: 176,800 ms/op
+
+
+Result "ru.spb.itmo.asashina.lab2.trie.TrieInsertBenchmarkRunner.insertFifteenThousandRandomData":
+  256,395 ±(99.9%) 31,322 ms/op [Average]
+  (min, avg, max) = (176,800, 256,395, 343,604), stdev = 36,070
+  CI (99.9%): [225,073, 287,717] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.6, OpenJDK 64-Bit Server VM, 17.0.6+10
+# VM invoker: /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=60725:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab2.trie.TrieInsertBenchmarkRunner.insertFiftyRandomData
+
+# Run progress: 20,00% complete, ETA 00:03:24
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 0,302 ms/op
+# Warmup Iteration   2: 0,387 ms/op
+# Warmup Iteration   3: 0,316 ms/op
+Iteration   1: 0,305 ms/op
+Iteration   2: 0,298 ms/op
+Iteration   3: 0,275 ms/op
+Iteration   4: 0,304 ms/op
+Iteration   5: 0,319 ms/op
+Iteration   6: 0,346 ms/op
+Iteration   7: 0,278 ms/op
+Iteration   8: 0,291 ms/op
+Iteration   9: 0,430 ms/op
+Iteration  10: 0,425 ms/op
+
+# Run progress: 26,67% complete, ETA 00:02:59
+# Fork: 1 of 2
+# Warmup Iteration   1: 0,448 ms/op
+# Warmup Iteration   2: 0,457 ms/op
+# Warmup Iteration   3: 0,353 ms/op
+Iteration   1: 0,397 ms/op
+Iteration   2: 0,350 ms/op
+Iteration   3: 0,376 ms/op
+Iteration   4: 0,355 ms/op
+Iteration   5: 0,410 ms/op
+Iteration   6: 0,324 ms/op
+Iteration   7: 0,306 ms/op
+Iteration   8: 0,253 ms/op
+Iteration   9: 0,336 ms/op
+Iteration  10: 0,369 ms/op
+
+# Run progress: 33,33% complete, ETA 00:02:38
+# Fork: 2 of 2
+# Warmup Iteration   1: 0,311 ms/op
+# Warmup Iteration   2: 0,355 ms/op
+# Warmup Iteration   3: 0,317 ms/op
+Iteration   1: 0,338 ms/op
+Iteration   2: 0,322 ms/op
+Iteration   3: 0,405 ms/op
+Iteration   4: 0,380 ms/op
+Iteration   5: 0,341 ms/op
+Iteration   6: 0,374 ms/op
+Iteration   7: 0,339 ms/op
+Iteration   8: 0,350 ms/op
+Iteration   9: 0,289 ms/op
+Iteration  10: 0,340 ms/op
+
+
+Result "ru.spb.itmo.asashina.lab2.trie.TrieInsertBenchmarkRunner.insertFiftyRandomData":
+  0,348 ±(99.9%) 0,034 ms/op [Average]
+  (min, avg, max) = (0,253, 0,348, 0,410), stdev = 0,039
+  CI (99.9%): [0,314, 0,381] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.6, OpenJDK 64-Bit Server VM, 17.0.6+10
+# VM invoker: /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=60725:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab2.trie.TrieInsertBenchmarkRunner.insertFiveThousandRandomData
+
+# Run progress: 40,00% complete, ETA 00:02:19
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 74,680 ms/op
+# Warmup Iteration   2: 63,062 ms/op
+# Warmup Iteration   3: 61,026 ms/op
+Iteration   1: 64,573 ms/op
+Iteration   2: 72,871 ms/op
+Iteration   3: 70,434 ms/op
+Iteration   4: 57,116 ms/op
+Iteration   5: 71,951 ms/op
+Iteration   6: 69,210 ms/op
+Iteration   7: 56,331 ms/op
+Iteration   8: 50,367 ms/op
+Iteration   9: 50,151 ms/op
+Iteration  10: 52,255 ms/op
+
+# Run progress: 46,67% complete, ETA 00:02:03
+# Fork: 1 of 2
+# Warmup Iteration   1: 76,990 ms/op
+# Warmup Iteration   2: 70,255 ms/op
+# Warmup Iteration   3: 65,881 ms/op
+Iteration   1: 69,623 ms/op
+Iteration   2: 68,934 ms/op
+Iteration   3: 71,984 ms/op
+Iteration   4: 61,510 ms/op
+Iteration   5: 72,399 ms/op
+Iteration   6: 70,061 ms/op
+Iteration   7: 62,821 ms/op
+Iteration   8: 52,405 ms/op
+Iteration   9: 53,343 ms/op
+Iteration  10: 52,312 ms/op
+
+# Run progress: 53,33% complete, ETA 00:01:47
+# Fork: 2 of 2
+# Warmup Iteration   1: 73,505 ms/op
+# Warmup Iteration   2: 63,037 ms/op
+# Warmup Iteration   3: 60,550 ms/op
+Iteration   1: 64,320 ms/op
+Iteration   2: 65,035 ms/op
+Iteration   3: 69,129 ms/op
+Iteration   4: 58,265 ms/op
+Iteration   5: 69,601 ms/op
+Iteration   6: 68,212 ms/op
+Iteration   7: 59,264 ms/op
+Iteration   8: 49,462 ms/op
+Iteration   9: 51,732 ms/op
+Iteration  10: 49,828 ms/op
+
+
+Result "ru.spb.itmo.asashina.lab2.trie.TrieInsertBenchmarkRunner.insertFiveThousandRandomData":
+  62,012 ±(99.9%) 7,000 ms/op [Average]
+  (min, avg, max) = (49,462, 62,012, 72,399), stdev = 8,062
+  CI (99.9%): [55,012, 69,012] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.6, OpenJDK 64-Bit Server VM, 17.0.6+10
+# VM invoker: /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=60725:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab2.trie.TrieInsertBenchmarkRunner.insertOneRandomData
+
+# Run progress: 60,00% complete, ETA 00:01:32
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 0,001 ms/op
+# Warmup Iteration   2: 0,004 ms/op
+# Warmup Iteration   3: 0,008 ms/op
+Iteration   1: 0,006 ms/op
+Iteration   2: 0,004 ms/op
+Iteration   3: 0,011 ms/op
+Iteration   4: 0,001 ms/op
+Iteration   5: 0,012 ms/op
+Iteration   6: 0,010 ms/op
+Iteration   7: 0,005 ms/op
+Iteration   8: 0,006 ms/op
+Iteration   9: 0,003 ms/op
+Iteration  10: 0,002 ms/op
+
+# Run progress: 66,67% complete, ETA 00:01:16
+# Fork: 1 of 2
+# Warmup Iteration   1: 0,006 ms/op
+# Warmup Iteration   2: 0,006 ms/op
+# Warmup Iteration   3: 0,001 ms/op
+Iteration   1: 0,008 ms/op
+Iteration   2: 0,010 ms/op
+Iteration   3: 0,009 ms/op
+Iteration   4: 0,009 ms/op
+Iteration   5: 0,003 ms/op
+Iteration   6: 0,006 ms/op
+Iteration   7: 0,003 ms/op
+Iteration   8: 0,003 ms/op
+Iteration   9: 0,001 ms/op
+Iteration  10: 0,002 ms/op
+
+# Run progress: 73,33% complete, ETA 00:01:00
+# Fork: 2 of 2
+# Warmup Iteration   1: 0,003 ms/op
+# Warmup Iteration   2: 0,011 ms/op
+# Warmup Iteration   3: 0,008 ms/op
+Iteration   1: 0,005 ms/op
+Iteration   2: 0,008 ms/op
+Iteration   3: 0,003 ms/op
+Iteration   4: 0,006 ms/op
+Iteration   5: 0,010 ms/op
+Iteration   6: 0,003 ms/op
+Iteration   7: 0,005 ms/op
+Iteration   8: 0,010 ms/op
+Iteration   9: ≈ 10⁻⁴ ms/op
+Iteration  10: 0,010 ms/op
+
+
+Result "ru.spb.itmo.asashina.lab2.trie.TrieInsertBenchmarkRunner.insertOneRandomData":
+  0,006 ±(99.9%) 0,003 ms/op [Average]
+  (min, avg, max) = (≈ 10⁻⁴, 0,006, 0,010), stdev = 0,003
+  CI (99.9%): [0,003, 0,009] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.6, OpenJDK 64-Bit Server VM, 17.0.6+10
+# VM invoker: /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=60725:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab2.trie.TrieInsertBenchmarkRunner.insertOneThousandRandomData
+
+# Run progress: 80,00% complete, ETA 00:00:45
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 14,432 ms/op
+# Warmup Iteration   2: 12,585 ms/op
+# Warmup Iteration   3: 15,053 ms/op
+Iteration   1: 11,467 ms/op
+Iteration   2: 11,949 ms/op
+Iteration   3: 12,366 ms/op
+Iteration   4: 10,339 ms/op
+Iteration   5: 11,477 ms/op
+Iteration   6: 11,671 ms/op
+Iteration   7: 11,866 ms/op
+Iteration   8: 10,917 ms/op
+Iteration   9: 10,603 ms/op
+Iteration  10: 10,491 ms/op
+
+# Run progress: 86,67% complete, ETA 00:00:29
+# Fork: 1 of 2
+# Warmup Iteration   1: 14,793 ms/op
+# Warmup Iteration   2: 10,986 ms/op
+# Warmup Iteration   3: 12,000 ms/op
+Iteration   1: 10,992 ms/op
+Iteration   2: 10,758 ms/op
+Iteration   3: 11,118 ms/op
+Iteration   4: 10,856 ms/op
+Iteration   5: 10,723 ms/op
+Iteration   6: 10,326 ms/op
+Iteration   7: 11,390 ms/op
+Iteration   8: 11,170 ms/op
+Iteration   9: 11,129 ms/op
+Iteration  10: 10,415 ms/op
+
+# Run progress: 93,33% complete, ETA 00:00:14
+# Fork: 2 of 2
+# Warmup Iteration   1: 14,183 ms/op
+# Warmup Iteration   2: 11,811 ms/op
+# Warmup Iteration   3: 12,756 ms/op
+Iteration   1: 10,518 ms/op
+Iteration   2: 10,823 ms/op
+Iteration   3: 11,188 ms/op
+Iteration   4: 10,636 ms/op
+Iteration   5: 10,554 ms/op
+Iteration   6: 11,328 ms/op
+Iteration   7: 11,186 ms/op
+Iteration   8: 10,263 ms/op
+Iteration   9: 10,595 ms/op
+Iteration  10: 11,339 ms/op
+
+
+Result "ru.spb.itmo.asashina.lab2.trie.TrieInsertBenchmarkRunner.insertOneThousandRandomData":
+  10,865 ±(99.9%) 0,308 ms/op [Average]
+  (min, avg, max) = (10,263, 10,865, 11,390), stdev = 0,355
+  CI (99.9%): [10,557, 11,174] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:03:42
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                                  Mode  Cnt    Score    Error  Units
+TrieInsertBenchmarkRunner.insertFifteenThousandRandomData  avgt   20  256,395 ± 31,322  ms/op
+TrieInsertBenchmarkRunner.insertFiftyRandomData            avgt   20    0,348 ±  0,034  ms/op
+TrieInsertBenchmarkRunner.insertFiveThousandRandomData     avgt   20   62,012 ±  7,000  ms/op
+TrieInsertBenchmarkRunner.insertOneRandomData              avgt   20    0,006 ±  0,003  ms/op
+TrieInsertBenchmarkRunner.insertOneThousandRandomData      avgt   20   10,865 ±  0,308  ms/op
+
+Process finished with exit code 0
