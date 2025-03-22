@@ -7,8 +7,7 @@ public class BallTreeNode {
 
     private final BallTreePoint pivot;
     private final Integer radius;
-
-    private List<BallTreePoint> points;
+    private final List<BallTreePoint> points;
 
     public BallTreeNode(BallTreePoint pivot, List<BallTreePoint> points, Integer radius) {
         this.pivot = pivot;

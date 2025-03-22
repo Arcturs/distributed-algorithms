@@ -11,21 +11,23 @@ public class BallTree {
 
     private List<BallTreePoint> points;
 
+    private final int leafSize;
     private final List<int[]> x;
-    private final int nNeighbors;
+    private final int neighborsAmount;
     private final Map<Integer, BallTreeNode> nodes = new HashMap<>();
     private final PriorityQueue<DistanceIndex> kNeighbors = new PriorityQueue<>();
 
     public BallTree(int neighborsAmount, int leafSize, List<int[]> x) {
-        this.nNeighbors = neighborsAmount;
+        this.neighborsAmount = neighborsAmount;
         this.points = new ArrayList<>();
+        this.leafSize = leafSize;
         this.x = x;
 
         for (var i = 0; i < x.size(); i++) {
             points.add(new BallTreePoint(x.get(i), i));
         }
 
-        constructTree(leafSize, 1, 0, points.size());
+        createTree(1, 0, points.size());
     }
 
     public void clearKNeighbors() {
@@ -53,31 +55,31 @@ public class BallTree {
                     continue;
                 }
                 double distance = euclideanDistance(newPoint, point.coordinates());
-                updateKNeighbors(distance, point.index(), nNeighbors);
+                updateKNeighbors(distance, point.index(), neighborsAmount);
             }
             return;
         }
 
         var currentNodePivot = currentNode.getPivot();
-        int leftChild = vertexIndex * 2;
-        int rightChild = vertexIndex * 2 + 1;
+        var leftChild = vertexIndex * 2;
+        var rightChild = vertexIndex * 2 + 1;
         double pivotDistance = euclideanDistance(newPoint, currentNodePivot.coordinates());
         if (newPoint != currentNodePivot.coordinates()) {
-            updateKNeighbors(pivotDistance, currentNodePivot.index(), nNeighbors);
+            updateKNeighbors(pivotDistance, currentNodePivot.index(), neighborsAmount);
         }
 
         searchInSubTree(leftChild, newPoint);
         searchInSubTree(rightChild, newPoint);
     }
 
-    private void constructTree(int leafSize, int vertexIndex, int startPoint, int endPoint) {
+    private void createTree(int vertexIndex, int startPoint, int endPoint) {
         if (endPoint - startPoint <= 0) {
             return;
         }
 
         List<BallTreePoint> subPoints = points.subList(startPoint, endPoint);
         var dimension = getMaxSpreadDimension(subPoints);
-        this.points = sortByDimensions(points, startPoint, endPoint, dimension);
+        this.points = getSortedPointsByDimension(startPoint, endPoint, dimension);
         var centroidIndex = startPoint + getCentroidIndex(subPoints, dimension);
         var radius = getMaxDistance(points.get(centroidIndex), subPoints);
         var currentNode = new BallTreeNode(points.get(centroidIndex), new ArrayList<>(), (int) radius);
@@ -87,8 +89,8 @@ public class BallTree {
             currentNode.addAllPoints(subPoints);
         } else {
             currentNode.addPoint(points.get(centroidIndex));
-            constructTree(leafSize, vertexIndex * 2, startPoint, centroidIndex);
-            constructTree(leafSize, vertexIndex * 2 + 1, centroidIndex + 1, endPoint);
+            createTree(vertexIndex * 2, startPoint, centroidIndex);
+            createTree(vertexIndex * 2 + 1, centroidIndex + 1, endPoint);
         }
     }
 
@@ -100,8 +102,18 @@ public class BallTree {
         var dimensions = points.get(0)
                 .coordinates()
                 .length;
-        List<Double> differences = new ArrayList<>(dimensions);
+        List<Integer> differences = getDimensionValuesDifferences(dimensions);
+        var maxDimension = 0;
+        for (var i = 1; i < differences.size(); i++) {
+            if (differences.get(i) > differences.get(maxDimension)) {
+                maxDimension = i;
+            }
+        }
+        return maxDimension;
+    }
 
+    private List<Integer> getDimensionValuesDifferences(int dimensions) {
+        List<Integer> differences = new ArrayList<>(dimensions);
         for (var i = 0; i < dimensions; i++) {
             int maxVal = Integer.MIN_VALUE;
             int minVal = Integer.MAX_VALUE;
@@ -114,24 +126,12 @@ public class BallTree {
                     minVal = val;
                 }
             }
-            differences.add((double) (maxVal - minVal));
+            differences.add(maxVal - minVal);
         }
-
-        var maxDimension = 0;
-        for (var i = 1; i < differences.size(); i++) {
-            if (differences.get(i) > differences.get(maxDimension)) {
-                maxDimension = i;
-            }
-        }
-        return maxDimension;
+        return differences;
     }
 
-    private List<BallTreePoint> sortByDimensions(
-            List<BallTreePoint> points,
-            int startPoint,
-            int endPoint,
-            int dimension) {
-
+    private List<BallTreePoint> getSortedPointsByDimension(int startPoint, int endPoint, int dimension) {
         List<BallTreePoint> result = new ArrayList<>(points);
         result.subList(startPoint, endPoint)
                 .sort(Comparator.comparingInt(p -> p.coordinates()[dimension]));
@@ -183,13 +183,14 @@ public class BallTree {
         return Math.sqrt(sum);
     }
 
-    private void updateKNeighbors(double distance, int index, int kN) {
-        if (kNeighbors.size() >= kN) {
-            if (distance < kNeighbors.peek().distance()) {
-                kNeighbors.poll();
-                kNeighbors.add(new DistanceIndex(distance, index));
-            }
-        } else {
+    private void updateKNeighbors(double distance, int index, int neighborsAmount) {
+        if (kNeighbors.size() < neighborsAmount) {
+            kNeighbors.add(new DistanceIndex(distance, index));
+            return;
+        }
+
+        if (distance < kNeighbors.peek().distance()) {
+            kNeighbors.poll();
             kNeighbors.add(new DistanceIndex(distance, index));
         }
     }
@@ -198,7 +199,8 @@ public class BallTree {
         var node = nodes.get(child);
         if (node != null && !node.getPoints().isEmpty() && node.getPivot().coordinates() != newPoint) {
             var childDistance = euclideanDistance(newPoint, node.getPivot().coordinates());
-            if (kNeighbors.size() < nNeighbors || childDistance - node.getRadius() < kNeighbors.peek().distance()) {
+            if (kNeighbors.size() < neighborsAmount
+                    || childDistance - node.getRadius() < kNeighbors.peek().distance()) {
                 search(child, newPoint);
             }
         }

@@ -20,7 +20,7 @@ class KnnTest {
 
         var classifier = new Knn(x, 1, 2);
 
-        var result = classifier.getKNeighbours(List.of(searchedX)).get(searchedX);
+        var result = classifier.getKNeighbours(searchedX);
         assertEquals(2, result.size());
         assertTrue(result.contains(x3));
         assertTrue(result.contains(x4));
@@ -37,7 +37,7 @@ class KnnTest {
 
         var classifier = new Knn(x, 6, 2);
 
-        var result = classifier.getKNeighbours(List.of(searchedX)).get(searchedX);
+        var result = classifier.getKNeighbours(searchedX);
         assertEquals(2, result.size());
         assertTrue(result.contains(x3));
         assertTrue(result.contains(x4));

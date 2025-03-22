@@ -1,0 +1,356 @@
+/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=50879:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/a.sashina/IdeaProjects/distributed-algorithms/target/classes:/Users/a.sashina/.m2/repository/org/openjdk/jmh/jmh-core/1.37/jmh-core-1.37.jar:/Users/a.sashina/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/Users/a.sashina/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/Users/a.sashina/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.37/jmh-generator-annprocess-1.37.jar:/Users/a.sashina/.m2/repository/org/jeasy/easy-random-core/5.0.0/easy-random-core-5.0.0.jar:/Users/a.sashina/.m2/repository/org/objenesis/objenesis/3.1/objenesis-3.1.jar:/Users/a.sashina/.m2/repository/io/github/classgraph/classgraph/4.8.90/classgraph-4.8.90.jar:/Users/a.sashina/.m2/repository/commons-io/commons-io/2.17.0/commons-io-2.17.0.jar ru.spb.itmo.asashina.lab2.ball.tree.BallTreeCreateBenchmarkRunner
+# JMH version: 1.37
+# VM version: JDK 17.0.6, OpenJDK 64-Bit Server VM, 17.0.6+10
+# VM invoker: /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=50879:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab2.ball.tree.BallTreeCreateBenchmarkRunner.createTreeWithFifteenThousandRandomData
+
+# Run progress: 0,00% complete, ETA 00:03:15
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 935,247 ms/op
+# Warmup Iteration   2: 1050,509 ms/op
+# Warmup Iteration   3: 1084,234 ms/op
+Iteration   1: 881,753 ms/op
+Iteration   2: 1092,596 ms/op
+Iteration   3: 1062,820 ms/op
+Iteration   4: 1112,289 ms/op
+Iteration   5: 869,579 ms/op
+Iteration   6: 884,494 ms/op
+Iteration   7: 858,894 ms/op
+Iteration   8: 1159,847 ms/op
+Iteration   9: 1053,002 ms/op
+Iteration  10: 872,134 ms/op
+
+# Run progress: 6,67% complete, ETA 00:04:27
+# Fork: 1 of 2
+# Warmup Iteration   1: 1051,064 ms/op
+# Warmup Iteration   2: 1102,527 ms/op
+# Warmup Iteration   3: 1197,009 ms/op
+Iteration   1: 1014,576 ms/op
+Iteration   2: 1015,107 ms/op
+Iteration   3: 1010,715 ms/op
+Iteration   4: 1163,414 ms/op
+Iteration   5: 828,931 ms/op
+Iteration   6: 1073,675 ms/op
+Iteration   7: 1042,724 ms/op
+Iteration   8: 838,446 ms/op
+Iteration   9: 841,861 ms/op
+Iteration  10: 858,316 ms/op
+
+# Run progress: 13,33% complete, ETA 00:04:02
+# Fork: 2 of 2
+# Warmup Iteration   1: 924,559 ms/op
+# Warmup Iteration   2: 1116,652 ms/op
+# Warmup Iteration   3: 1086,492 ms/op
+Iteration   1: 935,461 ms/op
+Iteration   2: 1136,873 ms/op
+Iteration   3: 1110,770 ms/op
+Iteration   4: 1040,424 ms/op
+Iteration   5: 923,403 ms/op
+Iteration   6: 1024,481 ms/op
+Iteration   7: 828,247 ms/op
+Iteration   8: 808,736 ms/op
+Iteration   9: 925,051 ms/op
+Iteration  10: 921,137 ms/op
+
+
+Result "ru.spb.itmo.asashina.lab2.ball.tree.BallTreeCreateBenchmarkRunner.createTreeWithFifteenThousandRandomData":
+  967,117 ±(99.9%) 96,475 ms/op [Average]
+  (min, avg, max) = (808,736, 967,117, 1163,414), stdev = 111,100
+  CI (99.9%): [870,643, 1063,592] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.6, OpenJDK 64-Bit Server VM, 17.0.6+10
+# VM invoker: /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=50879:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab2.ball.tree.BallTreeCreateBenchmarkRunner.createTreeWithFiftyRandomData
+
+# Run progress: 20,00% complete, ETA 00:03:48
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 0,014 ms/op
+# Warmup Iteration   2: 0,010 ms/op
+# Warmup Iteration   3: 0,010 ms/op
+Iteration   1: 0,009 ms/op
+Iteration   2: 0,009 ms/op
+Iteration   3: 0,009 ms/op
+Iteration   4: 0,008 ms/op
+Iteration   5: 0,012 ms/op
+Iteration   6: 0,010 ms/op
+Iteration   7: 0,010 ms/op
+Iteration   8: 0,010 ms/op
+Iteration   9: 0,010 ms/op
+Iteration  10: 0,011 ms/op
+
+# Run progress: 26,67% complete, ETA 00:03:15
+# Fork: 1 of 2
+# Warmup Iteration   1: 0,012 ms/op
+# Warmup Iteration   2: 0,009 ms/op
+# Warmup Iteration   3: 0,010 ms/op
+Iteration   1: 0,009 ms/op
+Iteration   2: 0,010 ms/op
+Iteration   3: 0,010 ms/op
+Iteration   4: 0,011 ms/op
+Iteration   5: 0,010 ms/op
+Iteration   6: 0,010 ms/op
+Iteration   7: 0,008 ms/op
+Iteration   8: 0,010 ms/op
+Iteration   9: 0,009 ms/op
+Iteration  10: 0,008 ms/op
+
+# Run progress: 33,33% complete, ETA 00:02:49
+# Fork: 2 of 2
+# Warmup Iteration   1: 0,014 ms/op
+# Warmup Iteration   2: 0,010 ms/op
+# Warmup Iteration   3: 0,009 ms/op
+Iteration   1: 0,009 ms/op
+Iteration   2: 0,008 ms/op
+Iteration   3: 0,009 ms/op
+Iteration   4: 0,009 ms/op
+Iteration   5: 0,009 ms/op
+Iteration   6: 0,010 ms/op
+Iteration   7: 0,009 ms/op
+Iteration   8: 0,009 ms/op
+Iteration   9: 0,009 ms/op
+Iteration  10: 0,009 ms/op
+
+
+Result "ru.spb.itmo.asashina.lab2.ball.tree.BallTreeCreateBenchmarkRunner.createTreeWithFiftyRandomData":
+  0,009 ±(99.9%) 0,001 ms/op [Average]
+  (min, avg, max) = (0,008, 0,009, 0,011), stdev = 0,001
+  CI (99.9%): [0,009, 0,010] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.6, OpenJDK 64-Bit Server VM, 17.0.6+10
+# VM invoker: /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=50879:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab2.ball.tree.BallTreeCreateBenchmarkRunner.createTreeWithFiveThousandRandomData
+
+# Run progress: 40,00% complete, ETA 00:02:28
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 102,147 ms/op
+# Warmup Iteration   2: 101,116 ms/op
+# Warmup Iteration   3: 94,651 ms/op
+Iteration   1: 89,080 ms/op
+Iteration   2: 95,931 ms/op
+Iteration   3: 87,246 ms/op
+Iteration   4: 104,157 ms/op
+Iteration   5: 114,700 ms/op
+Iteration   6: 92,252 ms/op
+Iteration   7: 115,807 ms/op
+Iteration   8: 99,375 ms/op
+Iteration   9: 89,444 ms/op
+Iteration  10: 89,758 ms/op
+
+# Run progress: 46,67% complete, ETA 00:02:09
+# Fork: 1 of 2
+# Warmup Iteration   1: 113,472 ms/op
+# Warmup Iteration   2: 94,190 ms/op
+# Warmup Iteration   3: 105,380 ms/op
+Iteration   1: 96,699 ms/op
+Iteration   2: 88,186 ms/op
+Iteration   3: 102,028 ms/op
+Iteration   4: 103,126 ms/op
+Iteration   5: 100,259 ms/op
+Iteration   6: 100,479 ms/op
+Iteration   7: 90,317 ms/op
+Iteration   8: 104,732 ms/op
+Iteration   9: 95,421 ms/op
+Iteration  10: 96,839 ms/op
+
+# Run progress: 53,33% complete, ETA 00:01:51
+# Fork: 2 of 2
+# Warmup Iteration   1: 106,571 ms/op
+# Warmup Iteration   2: 104,099 ms/op
+# Warmup Iteration   3: 95,795 ms/op
+Iteration   1: 83,132 ms/op
+Iteration   2: 88,248 ms/op
+Iteration   3: 102,111 ms/op
+Iteration   4: 98,784 ms/op
+Iteration   5: 98,099 ms/op
+Iteration   6: 107,982 ms/op
+Iteration   7: 100,679 ms/op
+Iteration   8: 93,976 ms/op
+Iteration   9: 101,374 ms/op
+Iteration  10: 95,760 ms/op
+
+
+Result "ru.spb.itmo.asashina.lab2.ball.tree.BallTreeCreateBenchmarkRunner.createTreeWithFiveThousandRandomData":
+  97,412 ±(99.9%) 5,383 ms/op [Average]
+  (min, avg, max) = (83,132, 97,412, 107,982), stdev = 6,200
+  CI (99.9%): [92,028, 102,795] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.6, OpenJDK 64-Bit Server VM, 17.0.6+10
+# VM invoker: /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=50879:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab2.ball.tree.BallTreeCreateBenchmarkRunner.createTreeWithOneRandomData
+
+# Run progress: 60,00% complete, ETA 00:01:34
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: ≈ 10⁻⁴ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁴ ms/op
+# Warmup Iteration   3: ≈ 10⁻⁴ ms/op
+Iteration   1: ≈ 10⁻⁴ ms/op
+Iteration   2: ≈ 10⁻⁴ ms/op
+Iteration   3: ≈ 10⁻⁴ ms/op
+Iteration   4: ≈ 10⁻⁴ ms/op
+Iteration   5: ≈ 10⁻⁴ ms/op
+Iteration   6: ≈ 10⁻⁴ ms/op
+Iteration   7: ≈ 10⁻⁴ ms/op
+Iteration   8: ≈ 10⁻⁴ ms/op
+Iteration   9: ≈ 10⁻⁴ ms/op
+Iteration  10: ≈ 10⁻⁴ ms/op
+
+# Run progress: 66,67% complete, ETA 00:01:17
+# Fork: 1 of 2
+# Warmup Iteration   1: ≈ 10⁻⁴ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁴ ms/op
+# Warmup Iteration   3: ≈ 10⁻⁴ ms/op
+Iteration   1: ≈ 10⁻⁴ ms/op
+Iteration   2: ≈ 10⁻⁴ ms/op
+Iteration   3: ≈ 10⁻⁴ ms/op
+Iteration   4: ≈ 10⁻⁴ ms/op
+Iteration   5: ≈ 10⁻⁴ ms/op
+Iteration   6: ≈ 10⁻⁴ ms/op
+Iteration   7: ≈ 10⁻⁴ ms/op
+Iteration   8: ≈ 10⁻⁴ ms/op
+Iteration   9: ≈ 10⁻⁴ ms/op
+Iteration  10: ≈ 10⁻⁴ ms/op
+
+# Run progress: 73,33% complete, ETA 00:01:01
+# Fork: 2 of 2
+# Warmup Iteration   1: ≈ 10⁻⁴ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁴ ms/op
+# Warmup Iteration   3: ≈ 10⁻⁴ ms/op
+Iteration   1: ≈ 10⁻⁴ ms/op
+Iteration   2: ≈ 10⁻⁴ ms/op
+Iteration   3: ≈ 10⁻⁴ ms/op
+Iteration   4: ≈ 10⁻⁴ ms/op
+Iteration   5: ≈ 10⁻⁴ ms/op
+Iteration   6: ≈ 10⁻⁴ ms/op
+Iteration   7: ≈ 10⁻⁴ ms/op
+Iteration   8: ≈ 10⁻⁴ ms/op
+Iteration   9: ≈ 10⁻⁴ ms/op
+Iteration  10: ≈ 10⁻⁴ ms/op
+
+
+Result "ru.spb.itmo.asashina.lab2.ball.tree.BallTreeCreateBenchmarkRunner.createTreeWithOneRandomData":
+  ≈ 10⁻⁴ ms/op
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.6, OpenJDK 64-Bit Server VM, 17.0.6+10
+# VM invoker: /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=50879:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab2.ball.tree.BallTreeCreateBenchmarkRunner.createTreeWithOneThousandRandomData
+
+# Run progress: 80,00% complete, ETA 00:00:45
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 1,598 ms/op
+# Warmup Iteration   2: 1,225 ms/op
+# Warmup Iteration   3: 1,381 ms/op
+Iteration   1: 1,170 ms/op
+Iteration   2: 1,116 ms/op
+Iteration   3: 1,163 ms/op
+Iteration   4: 1,188 ms/op
+Iteration   5: 1,185 ms/op
+Iteration   6: 1,182 ms/op
+Iteration   7: 1,233 ms/op
+Iteration   8: 1,304 ms/op
+Iteration   9: 1,401 ms/op
+Iteration  10: 1,525 ms/op
+
+# Run progress: 86,67% complete, ETA 00:00:30
+# Fork: 1 of 2
+# Warmup Iteration   1: 1,623 ms/op
+# Warmup Iteration   2: 1,452 ms/op
+# Warmup Iteration   3: 1,320 ms/op
+Iteration   1: 1,236 ms/op
+Iteration   2: 1,191 ms/op
+Iteration   3: 1,295 ms/op
+Iteration   4: 1,233 ms/op
+Iteration   5: 1,348 ms/op
+Iteration   6: 1,191 ms/op
+Iteration   7: 1,412 ms/op
+Iteration   8: 1,237 ms/op
+Iteration   9: 1,183 ms/op
+Iteration  10: 1,303 ms/op
+
+# Run progress: 93,33% complete, ETA 00:00:15
+# Fork: 2 of 2
+# Warmup Iteration   1: 1,931 ms/op
+# Warmup Iteration   2: 1,236 ms/op
+# Warmup Iteration   3: 1,348 ms/op
+Iteration   1: 1,253 ms/op
+Iteration   2: 1,263 ms/op
+Iteration   3: 1,362 ms/op
+Iteration   4: 1,203 ms/op
+Iteration   5: 1,249 ms/op
+Iteration   6: 1,402 ms/op
+Iteration   7: 1,239 ms/op
+Iteration   8: 1,441 ms/op
+Iteration   9: 1,269 ms/op
+Iteration  10: 1,429 ms/op
+
+
+Result "ru.spb.itmo.asashina.lab2.ball.tree.BallTreeCreateBenchmarkRunner.createTreeWithOneThousandRandomData":
+  1,287 ±(99.9%) 0,073 ms/op [Average]
+  (min, avg, max) = (1,183, 1,287, 1,441), stdev = 0,084
+  CI (99.9%): [1,214, 1,359] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:03:44
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                                              Mode  Cnt    Score    Error  Units
+BallTreeCreateBenchmarkRunner.createTreeWithFifteenThousandRandomData  avgt   20  967,117 ± 96,475  ms/op
+BallTreeCreateBenchmarkRunner.createTreeWithFiftyRandomData            avgt   20    0,009 ±  0,001  ms/op
+BallTreeCreateBenchmarkRunner.createTreeWithFiveThousandRandomData     avgt   20   97,412 ±  5,383  ms/op
+BallTreeCreateBenchmarkRunner.createTreeWithOneRandomData              avgt   20   ≈ 10⁻⁴           ms/op
+BallTreeCreateBenchmarkRunner.createTreeWithOneThousandRandomData      avgt   20    1,287 ±  0,073  ms/op
+
+Process finished with exit code 0
