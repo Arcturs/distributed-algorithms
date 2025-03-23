@@ -1,0 +1,558 @@
+/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=58737:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/a.sashina/IdeaProjects/distributed-algorithms/target/classes:/Users/a.sashina/.m2/repository/org/openjdk/jmh/jmh-core/1.37/jmh-core-1.37.jar:/Users/a.sashina/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/Users/a.sashina/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/Users/a.sashina/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.37/jmh-generator-annprocess-1.37.jar:/Users/a.sashina/.m2/repository/org/jeasy/easy-random-core/5.0.0/easy-random-core-5.0.0.jar:/Users/a.sashina/.m2/repository/org/objenesis/objenesis/3.1/objenesis-3.1.jar:/Users/a.sashina/.m2/repository/io/github/classgraph/classgraph/4.8.90/classgraph-4.8.90.jar:/Users/a.sashina/.m2/repository/commons-io/commons-io/2.17.0/commons-io-2.17.0.jar ru.spb.itmo.asashina.lab2.ball.tree.KnnBenchmarkRunner
+# JMH version: 1.37
+# VM version: JDK 17.0.6, OpenJDK 64-Bit Server VM, 17.0.6+10
+# VM invoker: /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=58737:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab2.ball.tree.KnnBenchmarkRunner.knnGetAllWithFiftyRandomData
+
+# Run progress: 0,00% complete, ETA 00:05:12
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 3,582 ms/op
+# Warmup Iteration   2: 3,714 ms/op
+# Warmup Iteration   3: 3,819 ms/op
+Iteration   1: 4,075 ms/op
+Iteration   2: 3,791 ms/op
+Iteration   3: 3,726 ms/op
+Iteration   4: 3,837 ms/op
+Iteration   5: 3,755 ms/op
+Iteration   6: 3,856 ms/op
+Iteration   7: 3,772 ms/op
+Iteration   8: 3,684 ms/op
+Iteration   9: 4,082 ms/op
+Iteration  10: 4,205 ms/op
+
+# Run progress: 4,17% complete, ETA 00:05:23
+# Fork: 1 of 2
+# Warmup Iteration   1: 4,295 ms/op
+# Warmup Iteration   2: 4,119 ms/op
+# Warmup Iteration   3: 4,128 ms/op
+Iteration   1: 4,034 ms/op
+Iteration   2: 4,013 ms/op
+Iteration   3: 3,780 ms/op
+Iteration   4: 4,095 ms/op
+Iteration   5: 4,140 ms/op
+Iteration   6: 3,908 ms/op
+Iteration   7: 3,820 ms/op
+Iteration   8: 3,877 ms/op
+Iteration   9: 3,813 ms/op
+Iteration  10: 4,011 ms/op
+
+# Run progress: 8,33% complete, ETA 00:05:11
+# Fork: 2 of 2
+# Warmup Iteration   1: 3,455 ms/op
+# Warmup Iteration   2: 3,878 ms/op
+# Warmup Iteration   3: 4,461 ms/op
+Iteration   1: 4,325 ms/op
+Iteration   2: 4,539 ms/op
+Iteration   3: 4,283 ms/op
+Iteration   4: 4,094 ms/op
+Iteration   5: 4,114 ms/op
+Iteration   6: 4,065 ms/op
+Iteration   7: 4,003 ms/op
+Iteration   8: 3,979 ms/op
+Iteration   9: 3,991 ms/op
+Iteration  10: 3,967 ms/op
+
+
+Result "ru.spb.itmo.asashina.lab2.ball.tree.KnnBenchmarkRunner.knnGetAllWithFiftyRandomData":
+  4,043 ±(99.9%) 0,159 ms/op [Average]
+  (min, avg, max) = (3,780, 4,043, 4,539), stdev = 0,183
+  CI (99.9%): [3,884, 4,202] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.6, OpenJDK 64-Bit Server VM, 17.0.6+10
+# VM invoker: /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=58737:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab2.ball.tree.KnnBenchmarkRunner.knnGetAllWithOneThousandRandomData
+
+# Run progress: 12,50% complete, ETA 00:04:55
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 754,774 ms/op
+# Warmup Iteration   2: 758,706 ms/op
+# Warmup Iteration   3: 902,403 ms/op
+Iteration   1: 879,783 ms/op
+Iteration   2: 839,897 ms/op
+Iteration   3: 827,979 ms/op
+Iteration   4: 893,091 ms/op
+Iteration   5: 843,770 ms/op
+Iteration   6: 991,463 ms/op
+Iteration   7: 989,127 ms/op
+Iteration   8: 892,075 ms/op
+Iteration   9: 862,768 ms/op
+Iteration  10: 985,886 ms/op
+
+# Run progress: 16,67% complete, ETA 00:08:02
+# Fork: 1 of 2
+# Warmup Iteration   1: 887,509 ms/op
+# Warmup Iteration   2: 745,106 ms/op
+# Warmup Iteration   3: 765,154 ms/op
+Iteration   1: 761,088 ms/op
+Iteration   2: 756,125 ms/op
+Iteration   3: 734,452 ms/op
+Iteration   4: 742,210 ms/op
+Iteration   5: 773,998 ms/op
+Iteration   6: 820,054 ms/op
+Iteration   7: 735,556 ms/op
+Iteration   8: 844,940 ms/op
+Iteration   9: 812,657 ms/op
+Iteration  10: 746,256 ms/op
+
+# Run progress: 20,83% complete, ETA 00:09:15
+# Fork: 2 of 2
+# Warmup Iteration   1: 769,806 ms/op
+# Warmup Iteration   2: 785,520 ms/op
+# Warmup Iteration   3: 879,121 ms/op
+Iteration   1: 809,120 ms/op
+Iteration   2: 917,798 ms/op
+Iteration   3: 833,132 ms/op
+Iteration   4: 814,151 ms/op
+Iteration   5: 803,663 ms/op
+Iteration   6: 782,626 ms/op
+Iteration   7: 797,915 ms/op
+Iteration   8: 813,197 ms/op
+Iteration   9: 773,593 ms/op
+Iteration  10: 776,011 ms/op
+
+
+Result "ru.spb.itmo.asashina.lab2.ball.tree.KnnBenchmarkRunner.knnGetAllWithOneThousandRandomData":
+  792,427 ±(99.9%) 38,450 ms/op [Average]
+  (min, avg, max) = (734,452, 792,427, 917,798), stdev = 44,279
+  CI (99.9%): [753,977, 830,877] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.6, OpenJDK 64-Bit Server VM, 17.0.6+10
+# VM invoker: /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=58737:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab2.ball.tree.KnnBenchmarkRunner.knnGetAllWithTwoHundredRandomData
+
+# Run progress: 25,00% complete, ETA 00:09:43
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 43,914 ms/op
+# Warmup Iteration   2: 51,804 ms/op
+# Warmup Iteration   3: 49,001 ms/op
+Iteration   1: 48,409 ms/op
+Iteration   2: 47,324 ms/op
+Iteration   3: 48,976 ms/op
+Iteration   4: 46,178 ms/op
+Iteration   5: 49,234 ms/op
+Iteration   6: 44,854 ms/op
+Iteration   7: 44,930 ms/op
+Iteration   8: 47,341 ms/op
+Iteration   9: 48,688 ms/op
+Iteration  10: 46,504 ms/op
+
+# Run progress: 29,17% complete, ETA 00:08:28
+# Fork: 1 of 2
+# Warmup Iteration   1: 41,717 ms/op
+# Warmup Iteration   2: 42,989 ms/op
+# Warmup Iteration   3: 45,064 ms/op
+Iteration   1: 44,235 ms/op
+Iteration   2: 43,876 ms/op
+Iteration   3: 47,265 ms/op
+Iteration   4: 47,808 ms/op
+Iteration   5: 46,802 ms/op
+Iteration   6: 44,136 ms/op
+Iteration   7: 45,161 ms/op
+Iteration   8: 44,402 ms/op
+Iteration   9: 44,931 ms/op
+Iteration  10: 43,306 ms/op
+
+# Run progress: 33,33% complete, ETA 00:07:28
+# Fork: 2 of 2
+# Warmup Iteration   1: 42,238 ms/op
+# Warmup Iteration   2: 45,656 ms/op
+# Warmup Iteration   3: 46,011 ms/op
+Iteration   1: 49,188 ms/op
+Iteration   2: 46,966 ms/op
+Iteration   3: 45,845 ms/op
+Iteration   4: 48,138 ms/op
+Iteration   5: 47,634 ms/op
+Iteration   6: 46,959 ms/op
+Iteration   7: 44,407 ms/op
+Iteration   8: 45,454 ms/op
+Iteration   9: 45,923 ms/op
+Iteration  10: 46,425 ms/op
+
+
+Result "ru.spb.itmo.asashina.lab2.ball.tree.KnnBenchmarkRunner.knnGetAllWithTwoHundredRandomData":
+  45,943 ±(99.9%) 1,416 ms/op [Average]
+  (min, avg, max) = (43,306, 45,943, 49,188), stdev = 1,630
+  CI (99.9%): [44,527, 47,359] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.6, OpenJDK 64-Bit Server VM, 17.0.6+10
+# VM invoker: /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=58737:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab2.ball.tree.KnnBenchmarkRunner.knnGetAllWithTwoRandomData
+
+# Run progress: 37,50% complete, ETA 00:06:38
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: ≈ 10⁻³ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁴ ms/op
+# Warmup Iteration   3: ≈ 10⁻⁴ ms/op
+Iteration   1: ≈ 10⁻³ ms/op
+Iteration   2: ≈ 10⁻³ ms/op
+Iteration   3: ≈ 10⁻³ ms/op
+Iteration   4: ≈ 10⁻³ ms/op
+Iteration   5: ≈ 10⁻³ ms/op
+Iteration   6: ≈ 10⁻³ ms/op
+Iteration   7: ≈ 10⁻³ ms/op
+Iteration   8: ≈ 10⁻³ ms/op
+Iteration   9: ≈ 10⁻³ ms/op
+Iteration  10: ≈ 10⁻³ ms/op
+
+# Run progress: 41,67% complete, ETA 00:05:53
+# Fork: 1 of 2
+# Warmup Iteration   1: ≈ 10⁻³ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁴ ms/op
+# Warmup Iteration   3: ≈ 10⁻⁴ ms/op
+Iteration   1: ≈ 10⁻³ ms/op
+Iteration   2: ≈ 10⁻³ ms/op
+Iteration   3: ≈ 10⁻³ ms/op
+Iteration   4: ≈ 10⁻³ ms/op
+Iteration   5: ≈ 10⁻³ ms/op
+Iteration   6: ≈ 10⁻³ ms/op
+Iteration   7: ≈ 10⁻³ ms/op
+Iteration   8: ≈ 10⁻³ ms/op
+Iteration   9: ≈ 10⁻³ ms/op
+Iteration  10: ≈ 10⁻³ ms/op
+
+# Run progress: 45,83% complete, ETA 00:05:15
+# Fork: 2 of 2
+# Warmup Iteration   1: ≈ 10⁻³ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁴ ms/op
+# Warmup Iteration   3: ≈ 10⁻⁴ ms/op
+Iteration   1: ≈ 10⁻³ ms/op
+Iteration   2: ≈ 10⁻³ ms/op
+Iteration   3: ≈ 10⁻⁴ ms/op
+Iteration   4: ≈ 10⁻³ ms/op
+Iteration   5: ≈ 10⁻³ ms/op
+Iteration   6: ≈ 10⁻³ ms/op
+Iteration   7: ≈ 10⁻³ ms/op
+Iteration   8: ≈ 10⁻³ ms/op
+Iteration   9: ≈ 10⁻³ ms/op
+Iteration  10: ≈ 10⁻³ ms/op
+
+
+Result "ru.spb.itmo.asashina.lab2.ball.tree.KnnBenchmarkRunner.knnGetAllWithTwoRandomData":
+  ≈ 10⁻³ ms/op
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.6, OpenJDK 64-Bit Server VM, 17.0.6+10
+# VM invoker: /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=58737:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab2.ball.tree.KnnBenchmarkRunner.knnGetOneWithFiftyRandomData
+
+# Run progress: 50,00% complete, ETA 00:04:40
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 0,090 ms/op
+# Warmup Iteration   2: 0,079 ms/op
+# Warmup Iteration   3: 0,115 ms/op
+Iteration   1: 0,050 ms/op
+Iteration   2: 0,102 ms/op
+Iteration   3: 0,102 ms/op
+Iteration   4: 0,104 ms/op
+Iteration   5: 0,005 ms/op
+Iteration   6: 0,107 ms/op
+Iteration   7: 0,098 ms/op
+Iteration   8: 0,071 ms/op
+Iteration   9: 0,068 ms/op
+Iteration  10: 0,101 ms/op
+
+# Run progress: 54,17% complete, ETA 00:04:09
+# Fork: 1 of 2
+# Warmup Iteration   1: 0,077 ms/op
+# Warmup Iteration   2: 0,081 ms/op
+# Warmup Iteration   3: 0,060 ms/op
+Iteration   1: 0,052 ms/op
+Iteration   2: 0,086 ms/op
+Iteration   3: 0,075 ms/op
+Iteration   4: 0,084 ms/op
+Iteration   5: 0,087 ms/op
+Iteration   6: 0,085 ms/op
+Iteration   7: 0,083 ms/op
+Iteration   8: 0,083 ms/op
+Iteration   9: 0,060 ms/op
+Iteration  10: 0,083 ms/op
+
+# Run progress: 58,33% complete, ETA 00:03:40
+# Fork: 2 of 2
+# Warmup Iteration   1: 0,097 ms/op
+# Warmup Iteration   2: 0,096 ms/op
+# Warmup Iteration   3: 0,095 ms/op
+Iteration   1: 0,096 ms/op
+Iteration   2: 0,098 ms/op
+Iteration   3: 0,066 ms/op
+Iteration   4: 0,057 ms/op
+Iteration   5: 0,101 ms/op
+Iteration   6: 0,102 ms/op
+Iteration   7: 0,053 ms/op
+Iteration   8: 0,051 ms/op
+Iteration   9: 0,099 ms/op
+Iteration  10: 0,097 ms/op
+
+
+Result "ru.spb.itmo.asashina.lab2.ball.tree.KnnBenchmarkRunner.knnGetOneWithFiftyRandomData":
+  0,080 ±(99.9%) 0,015 ms/op [Average]
+  (min, avg, max) = (0,051, 0,080, 0,102), stdev = 0,018
+  CI (99.9%): [0,065, 0,095] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.6, OpenJDK 64-Bit Server VM, 17.0.6+10
+# VM invoker: /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=58737:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab2.ball.tree.KnnBenchmarkRunner.knnGetOneWithOneThousandRandomData
+
+# Run progress: 62,50% complete, ETA 00:03:13
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 0,890 ms/op
+# Warmup Iteration   2: 1,087 ms/op
+# Warmup Iteration   3: 0,828 ms/op
+Iteration   1: 0,976 ms/op
+Iteration   2: 0,994 ms/op
+Iteration   3: 1,017 ms/op
+Iteration   4: 0,967 ms/op
+Iteration   5: 1,041 ms/op
+Iteration   6: 1,043 ms/op
+Iteration   7: 1,068 ms/op
+Iteration   8: 1,047 ms/op
+Iteration   9: 1,059 ms/op
+Iteration  10: 0,994 ms/op
+
+# Run progress: 66,67% complete, ETA 00:03:02
+# Fork: 1 of 2
+# Warmup Iteration   1: 0,873 ms/op
+# Warmup Iteration   2: 0,892 ms/op
+# Warmup Iteration   3: 0,919 ms/op
+Iteration   1: 1,092 ms/op
+Iteration   2: 1,077 ms/op
+Iteration   3: 0,935 ms/op
+Iteration   4: 1,000 ms/op
+Iteration   5: 1,017 ms/op
+Iteration   6: 0,976 ms/op
+Iteration   7: 0,915 ms/op
+Iteration   8: 1,020 ms/op
+Iteration   9: 0,946 ms/op
+Iteration  10: 0,990 ms/op
+
+# Run progress: 70,83% complete, ETA 00:02:47
+# Fork: 2 of 2
+# Warmup Iteration   1: 0,736 ms/op
+# Warmup Iteration   2: 0,778 ms/op
+# Warmup Iteration   3: 0,743 ms/op
+Iteration   1: 0,735 ms/op
+Iteration   2: 0,746 ms/op
+Iteration   3: 0,816 ms/op
+Iteration   4: 0,781 ms/op
+Iteration   5: 0,738 ms/op
+Iteration   6: 0,796 ms/op
+Iteration   7: 0,780 ms/op
+Iteration   8: 0,752 ms/op
+Iteration   9: 0,837 ms/op
+Iteration  10: 0,733 ms/op
+
+
+Result "ru.spb.itmo.asashina.lab2.ball.tree.KnnBenchmarkRunner.knnGetOneWithOneThousandRandomData":
+  0,884 ±(99.9%) 0,108 ms/op [Average]
+  (min, avg, max) = (0,733, 0,884, 1,092), stdev = 0,125
+  CI (99.9%): [0,776, 0,992] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.6, OpenJDK 64-Bit Server VM, 17.0.6+10
+# VM invoker: /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=58737:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab2.ball.tree.KnnBenchmarkRunner.knnGetOneWithTwoHundredRandomData
+
+# Run progress: 75,00% complete, ETA 00:02:30
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 0,212 ms/op
+# Warmup Iteration   2: 0,212 ms/op
+# Warmup Iteration   3: 0,182 ms/op
+Iteration   1: 0,232 ms/op
+Iteration   2: 0,235 ms/op
+Iteration   3: 0,252 ms/op
+Iteration   4: 0,251 ms/op
+Iteration   5: 0,248 ms/op
+Iteration   6: 0,166 ms/op
+Iteration   7: 0,159 ms/op
+Iteration   8: 0,233 ms/op
+Iteration   9: 0,213 ms/op
+Iteration  10: 0,229 ms/op
+
+# Run progress: 79,17% complete, ETA 00:02:02
+# Fork: 1 of 2
+# Warmup Iteration   1: 0,240 ms/op
+# Warmup Iteration   2: 0,272 ms/op
+# Warmup Iteration   3: 0,152 ms/op
+Iteration   1: 0,256 ms/op
+Iteration   2: 0,246 ms/op
+Iteration   3: 0,247 ms/op
+Iteration   4: 0,259 ms/op
+Iteration   5: 0,237 ms/op
+Iteration   6: 0,243 ms/op
+Iteration   7: 0,193 ms/op
+Iteration   8: 0,265 ms/op
+Iteration   9: 0,164 ms/op
+Iteration  10: 0,263 ms/op
+
+# Run progress: 83,33% complete, ETA 00:01:35
+# Fork: 2 of 2
+# Warmup Iteration   1: 0,221 ms/op
+# Warmup Iteration   2: 0,256 ms/op
+# Warmup Iteration   3: 0,214 ms/op
+Iteration   1: 0,219 ms/op
+Iteration   2: 0,225 ms/op
+Iteration   3: 0,228 ms/op
+Iteration   4: 0,237 ms/op
+Iteration   5: 0,238 ms/op
+Iteration   6: 0,238 ms/op
+Iteration   7: 0,232 ms/op
+Iteration   8: 0,227 ms/op
+Iteration   9: 0,236 ms/op
+Iteration  10: 0,235 ms/op
+
+
+Result "ru.spb.itmo.asashina.lab2.ball.tree.KnnBenchmarkRunner.knnGetOneWithTwoHundredRandomData":
+  0,234 ±(99.9%) 0,020 ms/op [Average]
+  (min, avg, max) = (0,164, 0,234, 0,265), stdev = 0,023
+  CI (99.9%): [0,214, 0,255] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.6, OpenJDK 64-Bit Server VM, 17.0.6+10
+# VM invoker: /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=58737:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab2.ball.tree.KnnBenchmarkRunner.knnGetOneWithTwoRandomData
+
+# Run progress: 87,50% complete, ETA 00:01:10
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: ≈ 10⁻⁴ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁴ ms/op
+# Warmup Iteration   3: ≈ 10⁻⁴ ms/op
+Iteration   1: ≈ 10⁻⁴ ms/op
+Iteration   2: ≈ 10⁻⁴ ms/op
+Iteration   3: ≈ 10⁻⁴ ms/op
+Iteration   4: ≈ 10⁻⁴ ms/op
+Iteration   5: ≈ 10⁻⁴ ms/op
+Iteration   6: ≈ 10⁻⁴ ms/op
+Iteration   7: ≈ 10⁻⁴ ms/op
+Iteration   8: ≈ 10⁻⁴ ms/op
+Iteration   9: ≈ 10⁻⁴ ms/op
+Iteration  10: ≈ 10⁻⁴ ms/op
+
+# Run progress: 91,67% complete, ETA 00:00:46
+# Fork: 1 of 2
+# Warmup Iteration   1: ≈ 10⁻⁴ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁴ ms/op
+# Warmup Iteration   3: ≈ 10⁻⁴ ms/op
+Iteration   1: ≈ 10⁻⁴ ms/op
+Iteration   2: ≈ 10⁻⁴ ms/op
+Iteration   3: ≈ 10⁻⁴ ms/op
+Iteration   4: ≈ 10⁻⁴ ms/op
+Iteration   5: ≈ 10⁻⁴ ms/op
+Iteration   6: ≈ 10⁻⁴ ms/op
+Iteration   7: ≈ 10⁻⁴ ms/op
+Iteration   8: ≈ 10⁻⁴ ms/op
+Iteration   9: ≈ 10⁻⁴ ms/op
+Iteration  10: ≈ 10⁻⁴ ms/op
+
+# Run progress: 95,83% complete, ETA 00:00:22
+# Fork: 2 of 2
+# Warmup Iteration   1: ≈ 10⁻⁴ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁴ ms/op
+# Warmup Iteration   3: ≈ 10⁻⁴ ms/op
+Iteration   1: ≈ 10⁻⁴ ms/op
+Iteration   2: ≈ 10⁻⁴ ms/op
+Iteration   3: ≈ 10⁻⁴ ms/op
+Iteration   4: ≈ 10⁻⁴ ms/op
+Iteration   5: ≈ 10⁻⁴ ms/op
+Iteration   6: ≈ 10⁻⁴ ms/op
+Iteration   7: ≈ 10⁻⁴ ms/op
+Iteration   8: ≈ 10⁻⁴ ms/op
+Iteration   9: ≈ 10⁻⁴ ms/op
+Iteration  10: ≈ 10⁻⁴ ms/op
+
+
+Result "ru.spb.itmo.asashina.lab2.ball.tree.KnnBenchmarkRunner.knnGetOneWithTwoRandomData":
+  ≈ 10⁻⁴ ms/op
+
+
+# Run complete. Total time: 00:08:55
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                              Mode  Cnt    Score    Error  Units
+KnnBenchmarkRunner.knnGetAllWithFiftyRandomData        avgt   20    4,043 ±  0,159  ms/op
+KnnBenchmarkRunner.knnGetAllWithOneThousandRandomData  avgt   20  792,427 ± 38,450  ms/op
+KnnBenchmarkRunner.knnGetAllWithTwoHundredRandomData   avgt   20   45,943 ±  1,416  ms/op
+KnnBenchmarkRunner.knnGetAllWithTwoRandomData          avgt   20   ≈ 10⁻³           ms/op
+KnnBenchmarkRunner.knnGetOneWithFiftyRandomData        avgt   20    0,080 ±  0,015  ms/op
+KnnBenchmarkRunner.knnGetOneWithOneThousandRandomData  avgt   20    0,884 ±  0,108  ms/op
+KnnBenchmarkRunner.knnGetOneWithTwoHundredRandomData   avgt   20    0,234 ±  0,020  ms/op
+KnnBenchmarkRunner.knnGetOneWithTwoRandomData          avgt   20   ≈ 10⁻⁴           ms/op
+
+Process finished with exit code 0

@@ -55,7 +55,7 @@ public class BallTree {
                     continue;
                 }
                 double distance = euclideanDistance(newPoint, point.coordinates());
-                updateKNeighbors(distance, point.index(), neighborsAmount);
+                updateKNeighbors(distance, point.index());
             }
             return;
         }
@@ -65,7 +65,7 @@ public class BallTree {
         var rightChild = vertexIndex * 2 + 1;
         double pivotDistance = euclideanDistance(newPoint, currentNodePivot.coordinates());
         if (newPoint != currentNodePivot.coordinates()) {
-            updateKNeighbors(pivotDistance, currentNodePivot.index(), neighborsAmount);
+            updateKNeighbors(pivotDistance, currentNodePivot.index());
         }
 
         searchInSubTree(leftChild, newPoint);
@@ -183,7 +183,7 @@ public class BallTree {
         return Math.sqrt(sum);
     }
 
-    private void updateKNeighbors(double distance, int index, int neighborsAmount) {
+    private void updateKNeighbors(double distance, int index) {
         if (kNeighbors.size() < neighborsAmount) {
             kNeighbors.add(new DistanceIndex(distance, index));
             return;
