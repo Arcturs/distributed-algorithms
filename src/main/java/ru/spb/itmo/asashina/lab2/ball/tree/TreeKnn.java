@@ -1,15 +1,15 @@
 package ru.spb.itmo.asashina.lab2.ball.tree;
 
-import ru.spb.itmo.asashina.lab2.ball.tree.BallTree.DistanceIndex;
+import ru.spb.itmo.asashina.lab2.ball.tree.Utils.DistanceIndex;
 
 import java.util.Comparator;
 import java.util.List;
 
-public class Knn {
+public class TreeKnn {
 
     private final BallTree tree;
 
-    public Knn(List<int[]> x, int leafSize, int neighboursAmount) {
+    public TreeKnn(List<int[]> x, int leafSize, int neighboursAmount) {
         this.tree = new BallTree(neighboursAmount, leafSize, x);
     }
 

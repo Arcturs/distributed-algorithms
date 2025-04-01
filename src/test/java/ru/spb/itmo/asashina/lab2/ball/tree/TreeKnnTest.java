@@ -7,7 +7,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class KnnTest {
+class TreeKnnTest {
 
     @Test
     void getKNeighborsWhenLeafSizeLessThanPointsTest() {
@@ -18,7 +18,7 @@ class KnnTest {
         var x4 = new int[]{4, 7};
         var x = List.of(x1, x2, searchedX, x3, x4);
 
-        var classifier = new Knn(x, 1, 2);
+        var classifier = new TreeKnn(x, 1, 2);
 
         var result = classifier.getKNeighbours(searchedX);
         assertEquals(2, result.size());
@@ -35,7 +35,7 @@ class KnnTest {
         var x4 = new int[]{4, 7};
         var x = List.of(x1, x2, searchedX, x3, x4);
 
-        var classifier = new Knn(x, 6, 2);
+        var classifier = new TreeKnn(x, 6, 2);
 
         var result = classifier.getKNeighbours(searchedX);
         assertEquals(2, result.size());

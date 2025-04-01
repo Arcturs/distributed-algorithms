@@ -29,11 +29,11 @@ import java.util.concurrent.TimeUnit;
 import java.util.stream.IntStream;
 
 @State(Scope.Thread)
-public class KnnBenchmarkRunner {
+public class LinearKnnBenchmarkRunner {
 
     private static final Random RANDOM = new Random();
 
-    private Knn knn;
+    private LinearKnn linearKnn;
     private List<int[]> data;
     private String currentBenchmark;
 
@@ -48,16 +48,16 @@ public class KnnBenchmarkRunner {
                                 .map(ignored -> RANDOM.nextInt(10))
                                 .toArray());
             }
-            knn = new Knn(data, 1, 1);
+            linearKnn = new LinearKnn(data, 1);
         } else if (currentBenchmark.contains("Fifty")) {
             readCsvFile("resources/fashion-mnist_test.csv", 50);
-            knn = new Knn(data, 10, 3);
+            linearKnn = new LinearKnn(data, 3);
         } else if (currentBenchmark.contains("TwoHundred")) {
             readCsvFile("resources/fashion-mnist_test.csv", 200);
-            knn = new Knn(data, 20, 10);
+            linearKnn = new LinearKnn(data,  10);
         } else {
             readCsvFile("resources/fashion-mnist_test.csv", 1_000);
-            knn = new Knn(data, 25, 15);
+            linearKnn = new LinearKnn(data,  15);
         }
         Collections.shuffle(data);
     }
@@ -69,7 +69,7 @@ public class KnnBenchmarkRunner {
     @Measurement(iterations = 10, time = 1)
     @Fork(value = 2, warmups = 1)
     public void knnGetOneWithTwoRandomData(Blackhole blackhole) {
-        var result = knn.getKNeighbours(data.get(0));
+        var result = linearKnn.getKNeighbours(data.get(0));
         blackhole.consume(result);
     }
 
@@ -81,7 +81,7 @@ public class KnnBenchmarkRunner {
     @Fork(value = 2, warmups = 1)
     public void knnGetAllWithTwoRandomData(Blackhole blackhole) {
         for (var x : data) {
-            var result = knn.getKNeighbours(x);
+            var result = linearKnn.getKNeighbours(x);
             blackhole.consume(result);
         }
     }
@@ -93,7 +93,7 @@ public class KnnBenchmarkRunner {
     @Measurement(iterations = 10, time = 1)
     @Fork(value = 2, warmups = 1)
     public void knnGetOneWithFiftyRandomData(Blackhole blackhole) {
-        var result = knn.getKNeighbours(data.get(0));
+        var result = linearKnn.getKNeighbours(data.get(0));
         blackhole.consume(result);
     }
 
@@ -105,7 +105,7 @@ public class KnnBenchmarkRunner {
     @Fork(value = 2, warmups = 1)
     public void knnGetAllWithFiftyRandomData(Blackhole blackhole) {
         for (var x : data) {
-            var result = knn.getKNeighbours(x);
+            var result = linearKnn.getKNeighbours(x);
             blackhole.consume(result);
         }
     }
@@ -117,7 +117,7 @@ public class KnnBenchmarkRunner {
     @Measurement(iterations = 10, time = 1)
     @Fork(value = 2, warmups = 1)
     public void knnGetOneWithTwoHundredRandomData(Blackhole blackhole) {
-        var result = knn.getKNeighbours(data.get(0));
+        var result = linearKnn.getKNeighbours(data.get(0));
         blackhole.consume(result);
     }
 
@@ -129,7 +129,7 @@ public class KnnBenchmarkRunner {
     @Fork(value = 2, warmups = 1)
     public void knnGetAllWithTwoHundredRandomData(Blackhole blackhole) {
         for (var x : data) {
-            var result = knn.getKNeighbours(x);
+            var result = linearKnn.getKNeighbours(x);
             blackhole.consume(result);
         }
     }
@@ -141,7 +141,7 @@ public class KnnBenchmarkRunner {
     @Measurement(iterations = 10, time = 1)
     @Fork(value = 2, warmups = 1)
     public void knnGetOneWithOneThousandRandomData(Blackhole blackhole) {
-        var result = knn.getKNeighbours(data.get(0));
+        var result = linearKnn.getKNeighbours(data.get(0));
         blackhole.consume(result);
     }
 
@@ -153,14 +153,14 @@ public class KnnBenchmarkRunner {
     @Fork(value = 2, warmups = 1)
     public void knnGetAllWithOneThousandRandomData(Blackhole blackhole) {
         for (var x : data) {
-            var result = knn.getKNeighbours(x);
+            var result = linearKnn.getKNeighbours(x);
             blackhole.consume(result);
         }
     }
 
     public static void main(String[] args) throws RunnerException {
         Options opt = new OptionsBuilder()
-                .include(KnnBenchmarkRunner.class.getSimpleName())
+                .include(LinearKnnBenchmarkRunner.class.getSimpleName())
                 .build();
         new Runner(opt).run();
     }

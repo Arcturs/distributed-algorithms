@@ -1,11 +1,16 @@
 package ru.spb.itmo.asashina.lab2.ball.tree;
 
+import ru.spb.itmo.asashina.lab2.ball.tree.Utils.DistanceIndex;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.PriorityQueue;
+
+import static ru.spb.itmo.asashina.lab2.ball.tree.Utils.euclideanDistance;
+import static ru.spb.itmo.asashina.lab2.ball.tree.Utils.updateKNeighbors;
 
 public class BallTree {
 
@@ -55,7 +60,7 @@ public class BallTree {
                     continue;
                 }
                 double distance = euclideanDistance(newPoint, point.coordinates());
-                updateKNeighbors(distance, point.index());
+                updateKNeighbors(kNeighbors, neighborsAmount, distance, point.index());
             }
             return;
         }
@@ -65,7 +70,7 @@ public class BallTree {
         var rightChild = vertexIndex * 2 + 1;
         double pivotDistance = euclideanDistance(newPoint, currentNodePivot.coordinates());
         if (newPoint != currentNodePivot.coordinates()) {
-            updateKNeighbors(pivotDistance, currentNodePivot.index());
+            updateKNeighbors(kNeighbors, neighborsAmount, pivotDistance, currentNodePivot.index());
         }
 
         searchInSubTree(leftChild, newPoint);
@@ -172,29 +177,6 @@ public class BallTree {
         return max;
     }
 
-    private double euclideanDistance(int[] a, int[] b) {
-        if (a.length != b.length) {
-            throw new IllegalArgumentException("Dimensions are not the same");
-        }
-        var sum = 0.0;
-        for (var i = 0; i < a.length; i++) {
-            sum += Math.pow(a[i] - b[i], 2);
-        }
-        return Math.sqrt(sum);
-    }
-
-    private void updateKNeighbors(double distance, int index) {
-        if (kNeighbors.size() < neighborsAmount) {
-            kNeighbors.add(new DistanceIndex(distance, index));
-            return;
-        }
-
-        if (distance < kNeighbors.peek().distance()) {
-            kNeighbors.poll();
-            kNeighbors.add(new DistanceIndex(distance, index));
-        }
-    }
-
     private void searchInSubTree(int child, int[] newPoint) {
         var node = nodes.get(child);
         if (node != null && !node.getPoints().isEmpty() && node.getPivot().coordinates() != newPoint) {
@@ -204,15 +186,6 @@ public class BallTree {
                 search(child, newPoint);
             }
         }
-    }
-
-    public record DistanceIndex(double distance, int index) implements Comparable<DistanceIndex> {
-
-        @Override
-        public int compareTo(DistanceIndex other) {
-            return Double.compare(other.distance, this.distance);
-        }
-
     }
 
 }

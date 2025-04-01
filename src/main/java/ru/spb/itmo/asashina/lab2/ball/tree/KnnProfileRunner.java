@@ -13,7 +13,7 @@ public class KnnProfileRunner {
 
     public static void main(String[] args) {
         var data = readCsvFile();
-        var knn = new Knn(data, 25, 15);
+        var knn = new TreeKnn(data, 25, 15);
         knn.getKNeighbours(data.get(RANDOM.nextInt(999)));
     }
 
