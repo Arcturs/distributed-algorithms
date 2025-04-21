@@ -18,6 +18,8 @@
         <easy-random.version>5.0.0</easy-random.version>
         <jqwik.version>1.9.2</jqwik.version>
         <commons-io.version>2.17.0</commons-io.version>
+        <lucene-core.version>10.2.0</lucene-core.version>
+        <spring-boot-starter.version>3.4.4</spring-boot-starter.version>
     </properties>
 
     <dependencies>
@@ -40,6 +42,27 @@
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
             <version>${commons-io.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-core</artifactId>
+            <version>${lucene-core.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>${spring-boot-starter.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring-boot-starter.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <version>${spring-boot-starter.version}</version>
         </dependency>
 
         <dependency>
