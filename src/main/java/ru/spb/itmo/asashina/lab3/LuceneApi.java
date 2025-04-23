@@ -1,8 +1,7 @@
 package ru.spb.itmo.asashina.lab3;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class LuceneApi {
@@ -12,6 +11,11 @@ public class LuceneApi {
     @GetMapping("/ping")
     public ResponseEntity<?> ping() {
         return ResponseEntity.ok("pong");
+    }
+
+    @PostMapping("/query")
+    public ResponseEntity<?> findByQuery(@RequestBody RequestQuery query) {
+        return ResponseEntity.ok(searcher.search(query));
     }
 
 }

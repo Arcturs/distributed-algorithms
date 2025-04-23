@@ -28,4 +28,14 @@ class LuceneSearcherTest {
         assertEquals(5, testIndexFile.listFiles().length);
     }
 
+    @Test
+    void searchTest() {
+        var searcher = new LuceneSearcher(testIndexFile.getPath(), 10);
+
+        var result = searcher.search(new RequestQuery("genres:\"Comedy\" AND title:\"Shrek *\"", 1));
+
+        assertEquals(1, result.size());
+        assertEquals("Shrek Forever After", result.get(0).getField("title").stringValue());
+    }
+
 }
