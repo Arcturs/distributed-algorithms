@@ -26,6 +26,7 @@ import static org.apache.lucene.document.Field.Store.YES;
 public class LuceneSearcher {
 
     private static final String DEFAULT_INDEX_PATH = "./indexes";
+    private static final int BUFFER_SIZE = 1024;
     private static final QueryParser QUERY_PARSER = new QueryParser("description", new StandardAnalyzer());
 
     private String indexPath = DEFAULT_INDEX_PATH;
@@ -99,6 +100,7 @@ public class LuceneSearcher {
         try (var indexWriter = new IndexWriter(indexDirectory, new IndexWriterConfig())) {
             boolean isFirstLine = true;
             var size = 0;
+            var buffer = new ArrayList<Document>();
             try (BufferedReader br = new BufferedReader(new FileReader(dataFileName))) {
                 String line;
                 while ((line = br.readLine()) != null) {
@@ -110,12 +112,20 @@ public class LuceneSearcher {
                     if (document == null) {
                         continue;
                     }
-                    indexWriter.addDocument(document);
+                    if (buffer.size() < BUFFER_SIZE) {
+                        buffer.add(document);
+                    } else {
+                        indexWriter.addDocuments(buffer);
+                        buffer.clear();
+                    }
                     size++;
                     if (size == rowNumber) {
                         break;
                     }
                 }
+            }
+            if (!buffer.isEmpty()) {
+                indexWriter.addDocuments(buffer);
             }
         } catch (IOException | NumberFormatException e) {
             throw new RuntimeException(e);
