@@ -1,0 +1,641 @@
+/opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=59370 -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/anastasiasasina/IdeaProjects/distributed-algorithms/target/classes:/Users/anastasiasasina/.m2/repository/org/openjdk/jmh/jmh-core/1.37/jmh-core-1.37.jar:/Users/anastasiasasina/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/Users/anastasiasasina/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/Users/anastasiasasina/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.37/jmh-generator-annprocess-1.37.jar:/Users/anastasiasasina/.m2/repository/org/jeasy/easy-random-core/5.0.0/easy-random-core-5.0.0.jar:/Users/anastasiasasina/.m2/repository/org/objenesis/objenesis/3.1/objenesis-3.1.jar:/Users/anastasiasasina/.m2/repository/io/github/classgraph/classgraph/4.8.90/classgraph-4.8.90.jar:/Users/anastasiasasina/.m2/repository/commons-io/commons-io/2.17.0/commons-io-2.17.0.jar:/Users/anastasiasasina/.m2/repository/org/apache/lucene/lucene-core/10.2.0/lucene-core-10.2.0.jar:/Users/anastasiasasina/.m2/repository/org/apache/lucene/lucene-queryparser/10.2.0/lucene-queryparser-10.2.0.jar:/Users/anastasiasasina/.m2/repository/org/apache/lucene/lucene-queries/10.2.0/lucene-queries-10.2.0.jar:/Users/anastasiasasina/.m2/repository/org/apache/lucene/lucene-sandbox/10.2.0/lucene-sandbox-10.2.0.jar:/Users/anastasiasasina/.m2/repository/org/apache/lucene/lucene-facet/10.2.0/lucene-facet-10.2.0.jar:/Users/anastasiasasina/.m2/repository/org/springframework/boot/spring-boot-starter/3.4.4/spring-boot-starter-3.4.4.jar:/Users/anastasiasasina/.m2/repository/org/springframework/boot/spring-boot/3.4.4/spring-boot-3.4.4.jar:/Users/anastasiasasina/.m2/repository/org/springframework/spring-context/6.2.5/spring-context-6.2.5.jar:/Users/anastasiasasina/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.4.4/spring-boot-autoconfigure-3.4.4.jar:/Users/anastasiasasina/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.4.4/spring-boot-starter-logging-3.4.4.jar:/Users/anastasiasasina/.m2/repository/ch/qos/logback/logback-classic/1.5.18/logback-classic-1.5.18.jar:/Users/anastasiasasina/.m2/repository/ch/qos/logback/logback-core/1.5.18/logback-core-1.5.18.jar:/Users/anastasiasasina/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar:/Users/anastasiasasina/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.jar:/Users/anastasiasasina/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar:/Users/anastasiasasina/.m2/repository/org/slf4j/jul-to-slf4j/2.0.17/jul-to-slf4j-2.0.17.jar:/Users/anastasiasasina/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/anastasiasasina/.m2/repository/org/springframework/spring-core/6.2.5/spring-core-6.2.5.jar:/Users/anastasiasasina/.m2/repository/org/springframework/spring-jcl/6.2.5/spring-jcl-6.2.5.jar:/Users/anastasiasasina/.m2/repository/org/yaml/snakeyaml/2.3/snakeyaml-2.3.jar:/Users/anastasiasasina/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.4.4/spring-boot-starter-web-3.4.4.jar:/Users/anastasiasasina/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.4.4/spring-boot-starter-json-3.4.4.jar:/Users/anastasiasasina/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.18.3/jackson-databind-2.18.3.jar:/Users/anastasiasasina/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.18.3/jackson-annotations-2.18.3.jar:/Users/anastasiasasina/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.18.3/jackson-core-2.18.3.jar:/Users/anastasiasasina/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.18.3/jackson-datatype-jdk8-2.18.3.jar:/Users/anastasiasasina/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.18.3/jackson-datatype-jsr310-2.18.3.jar:/Users/anastasiasasina/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.18.3/jackson-module-parameter-names-2.18.3.jar:/Users/anastasiasasina/.m2/repository/org/springframework/spring-web/6.2.5/spring-web-6.2.5.jar:/Users/anastasiasasina/.m2/repository/org/springframework/spring-beans/6.2.5/spring-beans-6.2.5.jar:/Users/anastasiasasina/.m2/repository/io/micrometer/micrometer-observation/1.14.5/micrometer-observation-1.14.5.jar:/Users/anastasiasasina/.m2/repository/io/micrometer/micrometer-commons/1.14.5/micrometer-commons-1.14.5.jar:/Users/anastasiasasina/.m2/repository/org/springframework/spring-webmvc/6.2.5/spring-webmvc-6.2.5.jar:/Users/anastasiasasina/.m2/repository/org/springframework/spring-aop/6.2.5/spring-aop-6.2.5.jar:/Users/anastasiasasina/.m2/repository/org/springframework/spring-expression/6.2.5/spring-expression-6.2.5.jar:/Users/anastasiasasina/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.4.4/spring-boot-starter-tomcat-3.4.4.jar:/Users/anastasiasasina/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.39/tomcat-embed-core-10.1.39.jar:/Users/anastasiasasina/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.39/tomcat-embed-el-10.1.39.jar:/Users/anastasiasasina/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.39/tomcat-embed-websocket-10.1.39.jar ru.spb.itmo.asashina.lab3.LuceneIndexBenchmarkRunner
+# JMH version: 1.37
+# VM version: JDK 23.0.2, OpenJDK 64-Bit Server VM, 23.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=59370 -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab3.LuceneIndexBenchmarkRunner.luceneIndexWithFiveHundredRows
+
+# Run progress: 0,00% complete, ETA 00:04:33
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: WARNING: A restricted method in java.lang.foreign.Linker has been called
+WARNING: java.lang.foreign.Linker::downcallHandle has been called by org.apache.lucene.store.PosixNativeAccess in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+апр. 24, 2025 9:40:23 PM org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+53,168 ms/op
+# Warmup Iteration   2: 29,446 ms/op
+# Warmup Iteration   3: 26,554 ms/op
+Iteration   1: 25,469 ms/op
+Iteration   2: 25,757 ms/op
+Iteration   3: 27,150 ms/op
+Iteration   4: 27,221 ms/op
+Iteration   5: 29,405 ms/op
+Iteration   6: 25,185 ms/op
+Iteration   7: 23,953 ms/op
+Iteration   8: 24,169 ms/op
+Iteration   9: 24,274 ms/op
+Iteration  10: 24,158 ms/op
+
+# Run progress: 4,76% complete, ETA 00:04:38
+# Fork: 1 of 2
+# Warmup Iteration   1: WARNING: A restricted method in java.lang.foreign.Linker has been called
+WARNING: java.lang.foreign.Linker::downcallHandle has been called by org.apache.lucene.store.PosixNativeAccess in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+апр. 24, 2025 9:40:36 PM org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+54,957 ms/op
+# Warmup Iteration   2: 30,545 ms/op
+# Warmup Iteration   3: 27,754 ms/op
+Iteration   1: 27,216 ms/op
+Iteration   2: 27,595 ms/op
+Iteration   3: 26,626 ms/op
+Iteration   4: 26,611 ms/op
+Iteration   5: 24,862 ms/op
+Iteration   6: 25,278 ms/op
+Iteration   7: 26,909 ms/op
+Iteration   8: 26,868 ms/op
+Iteration   9: 26,853 ms/op
+Iteration  10: 26,948 ms/op
+
+# Run progress: 9,52% complete, ETA 00:04:23
+# Fork: 2 of 2
+# Warmup Iteration   1: WARNING: A restricted method in java.lang.foreign.Linker has been called
+WARNING: java.lang.foreign.Linker::downcallHandle has been called by org.apache.lucene.store.PosixNativeAccess in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+апр. 24, 2025 9:40:50 PM org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+52,293 ms/op
+# Warmup Iteration   2: 28,171 ms/op
+# Warmup Iteration   3: 26,276 ms/op
+Iteration   1: 25,325 ms/op
+Iteration   2: 25,361 ms/op
+Iteration   3: 25,414 ms/op
+Iteration   4: 25,463 ms/op
+Iteration   5: 25,497 ms/op
+Iteration   6: 25,630 ms/op
+Iteration   7: 26,895 ms/op
+Iteration   8: 26,821 ms/op
+Iteration   9: 26,648 ms/op
+Iteration  10: 26,558 ms/op
+
+
+Result "ru.spb.itmo.asashina.lab3.LuceneIndexBenchmarkRunner.luceneIndexWithFiveHundredRows":
+  26,269 ±(99.9%) 0,703 ms/op [Average]
+  (min, avg, max) = (24,862, 26,269, 27,595), stdev = 0,810
+  CI (99.9%): [25,566, 26,972] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 23.0.2, OpenJDK 64-Bit Server VM, 23.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=59370 -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab3.LuceneIndexBenchmarkRunner.luceneIndexWithFiveThousandRows
+
+# Run progress: 14,29% complete, ETA 00:04:09
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: WARNING: A restricted method in java.lang.foreign.Linker has been called
+WARNING: java.lang.foreign.Linker::downcallHandle has been called by org.apache.lucene.store.PosixNativeAccess in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+апр. 24, 2025 9:41:04 PM org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+355,203 ms/op
+# Warmup Iteration   2: 159,035 ms/op
+# Warmup Iteration   3: 143,307 ms/op
+Iteration   1: 141,702 ms/op
+Iteration   2: 142,821 ms/op
+Iteration   3: 140,922 ms/op
+Iteration   4: 143,554 ms/op
+Iteration   5: 151,127 ms/op
+Iteration   6: 152,609 ms/op
+Iteration   7: 152,047 ms/op
+Iteration   8: 142,041 ms/op
+Iteration   9: 142,826 ms/op
+Iteration  10: 140,019 ms/op
+
+# Run progress: 19,05% complete, ETA 00:03:58
+# Fork: 1 of 2
+# Warmup Iteration   1: WARNING: A restricted method in java.lang.foreign.Linker has been called
+WARNING: java.lang.foreign.Linker::downcallHandle has been called by org.apache.lucene.store.PosixNativeAccess in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+апр. 24, 2025 9:41:19 PM org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+341,905 ms/op
+# Warmup Iteration   2: 155,952 ms/op
+# Warmup Iteration   3: 142,109 ms/op
+Iteration   1: 142,630 ms/op
+Iteration   2: 141,414 ms/op
+Iteration   3: 144,330 ms/op
+Iteration   4: 142,700 ms/op
+Iteration   5: 141,528 ms/op
+Iteration   6: 143,092 ms/op
+Iteration   7: 140,270 ms/op
+Iteration   8: 142,301 ms/op
+Iteration   9: 143,553 ms/op
+Iteration  10: 141,270 ms/op
+
+# Run progress: 23,81% complete, ETA 00:03:46
+# Fork: 2 of 2
+# Warmup Iteration   1: WARNING: A restricted method in java.lang.foreign.Linker has been called
+WARNING: java.lang.foreign.Linker::downcallHandle has been called by org.apache.lucene.store.PosixNativeAccess in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+апр. 24, 2025 9:41:33 PM org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+340,065 ms/op
+# Warmup Iteration   2: 157,724 ms/op
+# Warmup Iteration   3: 145,440 ms/op
+Iteration   1: 145,178 ms/op
+Iteration   2: 145,174 ms/op
+Iteration   3: 142,245 ms/op
+Iteration   4: 143,632 ms/op
+Iteration   5: 140,661 ms/op
+Iteration   6: 146,272 ms/op
+Iteration   7: 158,739 ms/op
+Iteration   8: 151,408 ms/op
+Iteration   9: 153,455 ms/op
+Iteration  10: 142,503 ms/op
+
+
+Result "ru.spb.itmo.asashina.lab3.LuceneIndexBenchmarkRunner.luceneIndexWithFiveThousandRows":
+  144,618 ±(99.9%) 4,083 ms/op [Average]
+  (min, avg, max) = (140,270, 144,618, 158,739), stdev = 4,703
+  CI (99.9%): [140,534, 148,701] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 23.0.2, OpenJDK 64-Bit Server VM, 23.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=59370 -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab3.LuceneIndexBenchmarkRunner.luceneIndexWithOneHundredRows
+
+# Run progress: 28,57% complete, ETA 00:03:33
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: WARNING: A restricted method in java.lang.foreign.Linker has been called
+WARNING: java.lang.foreign.Linker::downcallHandle has been called by org.apache.lucene.store.PosixNativeAccess in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+апр. 24, 2025 9:41:48 PM org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+23,178 ms/op
+# Warmup Iteration   2: 17,142 ms/op
+# Warmup Iteration   3: 16,919 ms/op
+Iteration   1: 17,248 ms/op
+Iteration   2: 17,044 ms/op
+Iteration   3: 16,674 ms/op
+Iteration   4: 16,373 ms/op
+Iteration   5: 14,768 ms/op
+Iteration   6: 14,802 ms/op
+Iteration   7: 14,250 ms/op
+Iteration   8: 13,783 ms/op
+Iteration   9: 15,960 ms/op
+Iteration  10: 17,193 ms/op
+
+# Run progress: 33,33% complete, ETA 00:03:17
+# Fork: 1 of 2
+# Warmup Iteration   1: WARNING: A restricted method in java.lang.foreign.Linker has been called
+WARNING: java.lang.foreign.Linker::downcallHandle has been called by org.apache.lucene.store.PosixNativeAccess in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+апр. 24, 2025 9:42:01 PM org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+25,838 ms/op
+# Warmup Iteration   2: 16,337 ms/op
+# Warmup Iteration   3: 15,433 ms/op
+Iteration   1: 14,670 ms/op
+Iteration   2: 14,249 ms/op
+Iteration   3: 14,180 ms/op
+Iteration   4: 15,152 ms/op
+Iteration   5: 15,489 ms/op
+Iteration   6: 15,787 ms/op
+Iteration   7: 13,770 ms/op
+Iteration   8: 14,290 ms/op
+Iteration   9: 15,275 ms/op
+Iteration  10: 15,195 ms/op
+
+# Run progress: 38,10% complete, ETA 00:03:03
+# Fork: 2 of 2
+# Warmup Iteration   1: WARNING: A restricted method in java.lang.foreign.Linker has been called
+WARNING: java.lang.foreign.Linker::downcallHandle has been called by org.apache.lucene.store.PosixNativeAccess in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+апр. 24, 2025 9:42:15 PM org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+22,990 ms/op
+# Warmup Iteration   2: 16,672 ms/op
+# Warmup Iteration   3: 16,691 ms/op
+Iteration   1: 17,051 ms/op
+Iteration   2: 14,370 ms/op
+Iteration   3: 13,937 ms/op
+Iteration   4: 13,470 ms/op
+Iteration   5: 13,066 ms/op
+Iteration   6: 14,102 ms/op
+Iteration   7: 15,499 ms/op
+Iteration   8: 15,522 ms/op
+Iteration   9: 14,469 ms/op
+Iteration  10: 14,999 ms/op
+
+
+Result "ru.spb.itmo.asashina.lab3.LuceneIndexBenchmarkRunner.luceneIndexWithOneHundredRows":
+  14,727 ±(99.9%) 0,804 ms/op [Average]
+  (min, avg, max) = (13,066, 14,727, 17,051), stdev = 0,926
+  CI (99.9%): [13,923, 15,531] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 23.0.2, OpenJDK 64-Bit Server VM, 23.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=59370 -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab3.LuceneIndexBenchmarkRunner.luceneIndexWithOneRow
+
+# Run progress: 42,86% complete, ETA 00:02:48
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: WARNING: A restricted method in java.lang.foreign.Linker has been called
+WARNING: java.lang.foreign.Linker::downcallHandle has been called by org.apache.lucene.store.PosixNativeAccess in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+апр. 24, 2025 9:42:29 PM org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+13,261 ms/op
+# Warmup Iteration   2: 9,365 ms/op
+# Warmup Iteration   3: 12,211 ms/op
+Iteration   1: 12,588 ms/op
+Iteration   2: 11,048 ms/op
+Iteration   3: 9,028 ms/op
+Iteration   4: 9,828 ms/op
+Iteration   5: 9,716 ms/op
+Iteration   6: 9,116 ms/op
+Iteration   7: 11,774 ms/op
+Iteration   8: 13,430 ms/op
+Iteration   9: 10,302 ms/op
+Iteration  10: 10,189 ms/op
+
+# Run progress: 47,62% complete, ETA 00:02:34
+# Fork: 1 of 2
+# Warmup Iteration   1: WARNING: A restricted method in java.lang.foreign.Linker has been called
+WARNING: java.lang.foreign.Linker::downcallHandle has been called by org.apache.lucene.store.PosixNativeAccess in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+апр. 24, 2025 9:42:43 PM org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+15,603 ms/op
+# Warmup Iteration   2: 11,972 ms/op
+# Warmup Iteration   3: 14,577 ms/op
+Iteration   1: 11,284 ms/op
+Iteration   2: 11,216 ms/op
+Iteration   3: 10,477 ms/op
+Iteration   4: 9,776 ms/op
+Iteration   5: 10,263 ms/op
+Iteration   6: 10,819 ms/op
+Iteration   7: 11,883 ms/op
+Iteration   8: 11,677 ms/op
+Iteration   9: 12,821 ms/op
+Iteration  10: 10,754 ms/op
+
+# Run progress: 52,38% complete, ETA 00:02:19
+# Fork: 2 of 2
+# Warmup Iteration   1: WARNING: A restricted method in java.lang.foreign.Linker has been called
+WARNING: java.lang.foreign.Linker::downcallHandle has been called by org.apache.lucene.store.PosixNativeAccess in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+апр. 24, 2025 9:42:56 PM org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+15,471 ms/op
+# Warmup Iteration   2: 10,612 ms/op
+# Warmup Iteration   3: 12,185 ms/op
+Iteration   1: 11,578 ms/op
+Iteration   2: 11,770 ms/op
+Iteration   3: 11,018 ms/op
+Iteration   4: 12,043 ms/op
+Iteration   5: 11,065 ms/op
+Iteration   6: 11,630 ms/op
+Iteration   7: 11,370 ms/op
+Iteration   8: 11,196 ms/op
+Iteration   9: 12,234 ms/op
+Iteration  10: 11,137 ms/op
+
+
+Result "ru.spb.itmo.asashina.lab3.LuceneIndexBenchmarkRunner.luceneIndexWithOneRow":
+  11,301 ±(99.9%) 0,611 ms/op [Average]
+  (min, avg, max) = (9,776, 11,301, 12,821), stdev = 0,704
+  CI (99.9%): [10,689, 11,912] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 23.0.2, OpenJDK 64-Bit Server VM, 23.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=59370 -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab3.LuceneIndexBenchmarkRunner.luceneIndexWithSixteenThousandRows
+
+# Run progress: 57,14% complete, ETA 00:02:05
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: WARNING: A restricted method in java.lang.foreign.Linker has been called
+WARNING: java.lang.foreign.Linker::downcallHandle has been called by org.apache.lucene.store.PosixNativeAccess in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+апр. 24, 2025 9:43:10 PM org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+770,656 ms/op
+# Warmup Iteration   2: 422,571 ms/op
+# Warmup Iteration   3: 400,632 ms/op
+Iteration   1: 421,824 ms/op
+Iteration   2: 418,549 ms/op
+Iteration   3: 416,957 ms/op
+Iteration   4: 404,441 ms/op
+Iteration   5: 382,761 ms/op
+Iteration   6: 410,661 ms/op
+Iteration   7: 389,394 ms/op
+Iteration   8: 387,825 ms/op
+Iteration   9: 393,990 ms/op
+Iteration  10: 388,797 ms/op
+
+# Run progress: 61,90% complete, ETA 00:01:53
+# Fork: 1 of 2
+# Warmup Iteration   1: WARNING: A restricted method in java.lang.foreign.Linker has been called
+WARNING: java.lang.foreign.Linker::downcallHandle has been called by org.apache.lucene.store.PosixNativeAccess in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+апр. 24, 2025 9:43:27 PM org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+764,668 ms/op
+# Warmup Iteration   2: 421,971 ms/op
+# Warmup Iteration   3: 401,377 ms/op
+Iteration   1: 392,960 ms/op
+Iteration   2: 391,313 ms/op
+Iteration   3: 388,780 ms/op
+Iteration   4: 386,521 ms/op
+Iteration   5: 393,479 ms/op
+Iteration   6: 389,972 ms/op
+Iteration   7: 386,687 ms/op
+Iteration   8: 391,782 ms/op
+Iteration   9: 391,326 ms/op
+Iteration  10: 388,852 ms/op
+
+# Run progress: 66,67% complete, ETA 00:01:40
+# Fork: 2 of 2
+# Warmup Iteration   1: WARNING: A restricted method in java.lang.foreign.Linker has been called
+WARNING: java.lang.foreign.Linker::downcallHandle has been called by org.apache.lucene.store.PosixNativeAccess in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+апр. 24, 2025 9:43:43 PM org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+1025,079 ms/op
+# Warmup Iteration   2: 501,900 ms/op
+# Warmup Iteration   3: 418,144 ms/op
+Iteration   1: 391,275 ms/op
+Iteration   2: 396,457 ms/op
+Iteration   3: 394,979 ms/op
+Iteration   4: 409,875 ms/op
+Iteration   5: 399,018 ms/op
+Iteration   6: 393,177 ms/op
+Iteration   7: 393,263 ms/op
+Iteration   8: 394,466 ms/op
+Iteration   9: 390,367 ms/op
+Iteration  10: 395,487 ms/op
+
+
+Result "ru.spb.itmo.asashina.lab3.LuceneIndexBenchmarkRunner.luceneIndexWithSixteenThousandRows":
+  393,002 ±(99.9%) 4,403 ms/op [Average]
+  (min, avg, max) = (386,521, 393,002, 409,875), stdev = 5,071
+  CI (99.9%): [388,598, 397,405] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 23.0.2, OpenJDK 64-Bit Server VM, 23.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=59370 -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab3.LuceneIndexBenchmarkRunner.luceneIndexWithTenThousandRows
+
+# Run progress: 71,43% complete, ETA 00:01:26
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: WARNING: A restricted method in java.lang.foreign.Linker has been called
+WARNING: java.lang.foreign.Linker::downcallHandle has been called by org.apache.lucene.store.PosixNativeAccess in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+апр. 24, 2025 9:43:59 PM org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+613,769 ms/op
+# Warmup Iteration   2: 293,335 ms/op
+# Warmup Iteration   3: 270,996 ms/op
+Iteration   1: 263,649 ms/op
+Iteration   2: 261,215 ms/op
+Iteration   3: 259,826 ms/op
+Iteration   4: 256,962 ms/op
+Iteration   5: 258,582 ms/op
+Iteration   6: 256,431 ms/op
+Iteration   7: 257,520 ms/op
+Iteration   8: 257,952 ms/op
+Iteration   9: 259,157 ms/op
+Iteration  10: 260,105 ms/op
+
+# Run progress: 76,19% complete, ETA 00:01:12
+# Fork: 1 of 2
+# Warmup Iteration   1: WARNING: A restricted method in java.lang.foreign.Linker has been called
+WARNING: java.lang.foreign.Linker::downcallHandle has been called by org.apache.lucene.store.PosixNativeAccess in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+апр. 24, 2025 9:44:13 PM org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+593,794 ms/op
+# Warmup Iteration   2: 285,536 ms/op
+# Warmup Iteration   3: 292,945 ms/op
+Iteration   1: 275,883 ms/op
+Iteration   2: 278,458 ms/op
+Iteration   3: 258,521 ms/op
+Iteration   4: 253,071 ms/op
+Iteration   5: 252,092 ms/op
+Iteration   6: 253,060 ms/op
+Iteration   7: 254,394 ms/op
+Iteration   8: 253,305 ms/op
+Iteration   9: 250,781 ms/op
+Iteration  10: 252,772 ms/op
+
+# Run progress: 80,95% complete, ETA 00:00:57
+# Fork: 2 of 2
+# Warmup Iteration   1: WARNING: A restricted method in java.lang.foreign.Linker has been called
+WARNING: java.lang.foreign.Linker::downcallHandle has been called by org.apache.lucene.store.PosixNativeAccess in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+апр. 24, 2025 9:44:28 PM org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+609,216 ms/op
+# Warmup Iteration   2: 285,371 ms/op
+# Warmup Iteration   3: 262,385 ms/op
+Iteration   1: 253,097 ms/op
+Iteration   2: 250,983 ms/op
+Iteration   3: 252,041 ms/op
+Iteration   4: 255,588 ms/op
+Iteration   5: 253,431 ms/op
+Iteration   6: 251,929 ms/op
+Iteration   7: 251,995 ms/op
+Iteration   8: 252,301 ms/op
+Iteration   9: 251,510 ms/op
+Iteration  10: 251,883 ms/op
+
+
+Result "ru.spb.itmo.asashina.lab3.LuceneIndexBenchmarkRunner.luceneIndexWithTenThousandRows":
+  255,355 ±(99.9%) 6,659 ms/op [Average]
+  (min, avg, max) = (250,781, 255,355, 278,458), stdev = 7,668
+  CI (99.9%): [248,696, 262,013] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 23.0.2, OpenJDK 64-Bit Server VM, 23.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=59370 -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab3.LuceneIndexBenchmarkRunner.luceneIndexWithThousandRows
+
+# Run progress: 85,71% complete, ETA 00:00:43
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: WARNING: A restricted method in java.lang.foreign.Linker has been called
+WARNING: java.lang.foreign.Linker::downcallHandle has been called by org.apache.lucene.store.PosixNativeAccess in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+апр. 24, 2025 9:44:42 PM org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+78,722 ms/op
+# Warmup Iteration   2: 41,916 ms/op
+# Warmup Iteration   3: 39,585 ms/op
+Iteration   1: 39,153 ms/op
+Iteration   2: 40,323 ms/op
+Iteration   3: 42,289 ms/op
+Iteration   4: 40,793 ms/op
+Iteration   5: 38,690 ms/op
+Iteration   6: 38,889 ms/op
+Iteration   7: 38,294 ms/op
+Iteration   8: 38,320 ms/op
+Iteration   9: 38,638 ms/op
+Iteration  10: 38,472 ms/op
+
+# Run progress: 90,48% complete, ETA 00:00:28
+# Fork: 1 of 2
+# Warmup Iteration   1: WARNING: A restricted method in java.lang.foreign.Linker has been called
+WARNING: java.lang.foreign.Linker::downcallHandle has been called by org.apache.lucene.store.PosixNativeAccess in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+апр. 24, 2025 9:44:56 PM org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+79,170 ms/op
+# Warmup Iteration   2: 42,333 ms/op
+# Warmup Iteration   3: 40,115 ms/op
+Iteration   1: 39,587 ms/op
+Iteration   2: 39,884 ms/op
+Iteration   3: 41,185 ms/op
+Iteration   4: 40,864 ms/op
+Iteration   5: 40,374 ms/op
+Iteration   6: 40,427 ms/op
+Iteration   7: 40,393 ms/op
+Iteration   8: 40,721 ms/op
+Iteration   9: 40,400 ms/op
+Iteration  10: 38,345 ms/op
+
+# Run progress: 95,24% complete, ETA 00:00:14
+# Fork: 2 of 2
+# Warmup Iteration   1: WARNING: A restricted method in java.lang.foreign.Linker has been called
+WARNING: java.lang.foreign.Linker::downcallHandle has been called by org.apache.lucene.store.PosixNativeAccess in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+апр. 24, 2025 9:45:10 PM org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+82,771 ms/op
+# Warmup Iteration   2: 41,345 ms/op
+# Warmup Iteration   3: 38,572 ms/op
+Iteration   1: 38,231 ms/op
+Iteration   2: 37,887 ms/op
+Iteration   3: 38,211 ms/op
+Iteration   4: 37,568 ms/op
+Iteration   5: 39,012 ms/op
+Iteration   6: 41,864 ms/op
+Iteration   7: 39,762 ms/op
+Iteration   8: 39,954 ms/op
+Iteration   9: 38,674 ms/op
+Iteration  10: 38,429 ms/op
+
+
+Result "ru.spb.itmo.asashina.lab3.LuceneIndexBenchmarkRunner.luceneIndexWithThousandRows":
+  39,588 ±(99.9%) 1,060 ms/op [Average]
+  (min, avg, max) = (37,568, 39,588, 41,864), stdev = 1,220
+  CI (99.9%): [38,529, 40,648] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:05:01
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                                      Mode  Cnt    Score   Error  Units
+LuceneIndexBenchmarkRunner.luceneIndexWithFiveHundredRows      avgt   20   26,269 ± 0,703  ms/op
+LuceneIndexBenchmarkRunner.luceneIndexWithFiveThousandRows     avgt   20  144,618 ± 4,083  ms/op
+LuceneIndexBenchmarkRunner.luceneIndexWithOneHundredRows       avgt   20   14,727 ± 0,804  ms/op
+LuceneIndexBenchmarkRunner.luceneIndexWithOneRow               avgt   20   11,301 ± 0,611  ms/op
+LuceneIndexBenchmarkRunner.luceneIndexWithSixteenThousandRows  avgt   20  393,002 ± 4,403  ms/op
+LuceneIndexBenchmarkRunner.luceneIndexWithTenThousandRows      avgt   20  255,355 ± 6,659  ms/op
+LuceneIndexBenchmarkRunner.luceneIndexWithThousandRows         avgt   20   39,588 ± 1,060  ms/op
+
+Process finished with exit code 0

@@ -41,6 +41,14 @@ public class LuceneSearcher {
         }
     }
 
+    public LuceneSearcher(int rowNumber) {
+        try {
+            index(rowNumber);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public LuceneSearcher() {
         try {
             index();
@@ -124,6 +132,9 @@ public class LuceneSearcher {
         document.add(new TextField("title", columns[1], YES));
         document.add(new TextField("director", columns[2], YES));
         document.add(new TextField("cast", columns[3], YES));
+        if (columns.length == 4) {
+            return document;
+        }
         document.add(new TextField("country", columns[4], YES));
         document.add(new TextField("date_added", columns[5], YES));
         document.add(new IntField("release_year", Integer.parseInt(columns[6]), YES));
@@ -131,6 +142,9 @@ public class LuceneSearcher {
         document.add(new TextField("genres", columns[8], YES));
         document.add(new TextField("language", columns[9], YES));
         document.add(new TextField("description", columns[10], YES));
+        if (columns.length == 11) {
+            return document;
+        }
         document.add(new FloatField("popularity", Float.parseFloat(columns[11]), YES));
         document.add(new LongField("budget", Long.parseLong(columns[12]), YES));
         document.add(new LongField("revenue", Long.parseLong(columns[13]), YES));
