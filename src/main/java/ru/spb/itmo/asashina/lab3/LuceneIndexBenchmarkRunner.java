@@ -24,7 +24,7 @@ public class LuceneIndexBenchmarkRunner {
     }
 
     @Benchmark
-    @BenchmarkMode(Mode.AverageTime)
+    @BenchmarkMode(Mode.Throughput)
     @OutputTimeUnit(TimeUnit.MILLISECONDS)
     @Warmup(iterations = 3, time = 1)
     @Measurement(iterations = 10, time = 1)
@@ -35,7 +35,7 @@ public class LuceneIndexBenchmarkRunner {
     }
 
     @Benchmark
-    @BenchmarkMode(Mode.AverageTime)
+    @BenchmarkMode(Mode.Throughput)
     @OutputTimeUnit(TimeUnit.MILLISECONDS)
     @Warmup(iterations = 3, time = 1)
     @Measurement(iterations = 10, time = 1)
@@ -46,7 +46,7 @@ public class LuceneIndexBenchmarkRunner {
     }
 
     @Benchmark
-    @BenchmarkMode(Mode.AverageTime)
+    @BenchmarkMode(Mode.Throughput)
     @OutputTimeUnit(TimeUnit.MILLISECONDS)
     @Warmup(iterations = 3, time = 1)
     @Measurement(iterations = 10, time = 1)
@@ -57,7 +57,7 @@ public class LuceneIndexBenchmarkRunner {
     }
 
     @Benchmark
-    @BenchmarkMode(Mode.AverageTime)
+    @BenchmarkMode(Mode.Throughput)
     @OutputTimeUnit(TimeUnit.MILLISECONDS)
     @Warmup(iterations = 3, time = 1)
     @Measurement(iterations = 10, time = 1)
@@ -68,7 +68,7 @@ public class LuceneIndexBenchmarkRunner {
     }
 
     @Benchmark
-    @BenchmarkMode(Mode.AverageTime)
+    @BenchmarkMode(Mode.Throughput)
     @OutputTimeUnit(TimeUnit.MILLISECONDS)
     @Warmup(iterations = 3, time = 1)
     @Measurement(iterations = 10, time = 1)
@@ -79,7 +79,7 @@ public class LuceneIndexBenchmarkRunner {
     }
 
     @Benchmark
-    @BenchmarkMode(Mode.AverageTime)
+    @BenchmarkMode(Mode.Throughput)
     @OutputTimeUnit(TimeUnit.MILLISECONDS)
     @Warmup(iterations = 3, time = 1)
     @Measurement(iterations = 10, time = 1)
@@ -90,7 +90,7 @@ public class LuceneIndexBenchmarkRunner {
     }
 
     @Benchmark
-    @BenchmarkMode(Mode.AverageTime)
+    @BenchmarkMode(Mode.Throughput)
     @OutputTimeUnit(TimeUnit.MILLISECONDS)
     @Warmup(iterations = 3, time = 1)
     @Measurement(iterations = 10, time = 1)
