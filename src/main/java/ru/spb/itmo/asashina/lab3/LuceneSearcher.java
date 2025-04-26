@@ -25,7 +25,7 @@ import static org.apache.lucene.document.Field.Store.YES;
 @Component
 public class LuceneSearcher {
 
-    private static final String DEFAULT_INDEX_PATH = "./indexes";
+    private static final String DEFAULT_INDEX_PATH = "./indexes/prod";
     private static final int BUFFER_SIZE = 1024;
     private static final QueryParser QUERY_PARSER = new QueryParser("description", new StandardAnalyzer());
 
