@@ -2,7 +2,6 @@ package ru.spb.itmo.asashina.lab4;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.spb.itmo.asashina.lab4.environment.Replica;
 import ru.spb.itmo.asashina.lab4.operation.DeleteOperation;
 import ru.spb.itmo.asashina.lab4.operation.InsertOperation;
 import ru.spb.itmo.asashina.lab4.operation.Operation;
