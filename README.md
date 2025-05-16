@@ -6,4 +6,4 @@
 - [Чья-то презентация про идеальное хеширование](https://www.dropbox.com/scl/fo/y5x5rbqbih6wlvn7w0qt1/AJV3t3Kz0BAE4FX3BLAnhJ0?dl=0&e=1&preview=l5_2-Cuckoo-hashing.pdf&rlkey=23od60wq2eagu2vj6syn7h4hy);
 - [Статья про LSH для поиска похожих документов](https://www.pinecone.io/learn/series/faiss/locality-sensitive-hashing/);
 - [Статья про trie на хабре](https://habr.com/ru/articles/111874/);
-- [Блок про работу lucene](https://j.blaszyk.me/tech-blog/exploring-apache-lucene-index/).
+- [Блог про работу lucene](https://j.blaszyk.me/tech-blog/exploring-apache-lucene-index/).

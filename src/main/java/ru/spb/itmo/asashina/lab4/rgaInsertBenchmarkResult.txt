@@ -1,0 +1,358 @@
+/opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=49375 -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/anastasiasasina/IdeaProjects/distributed-algorithms/target/classes:/Users/anastasiasasina/.m2/repository/org/openjdk/jmh/jmh-core/1.37/jmh-core-1.37.jar:/Users/anastasiasasina/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/Users/anastasiasasina/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/Users/anastasiasasina/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.37/jmh-generator-annprocess-1.37.jar:/Users/anastasiasasina/.m2/repository/org/jeasy/easy-random-core/5.0.0/easy-random-core-5.0.0.jar:/Users/anastasiasasina/.m2/repository/org/objenesis/objenesis/3.1/objenesis-3.1.jar:/Users/anastasiasasina/.m2/repository/io/github/classgraph/classgraph/4.8.90/classgraph-4.8.90.jar:/Users/anastasiasasina/.m2/repository/commons-io/commons-io/2.17.0/commons-io-2.17.0.jar:/Users/anastasiasasina/.m2/repository/org/apache/lucene/lucene-core/10.2.0/lucene-core-10.2.0.jar:/Users/anastasiasasina/.m2/repository/org/apache/lucene/lucene-queryparser/10.2.0/lucene-queryparser-10.2.0.jar:/Users/anastasiasasina/.m2/repository/org/apache/lucene/lucene-queries/10.2.0/lucene-queries-10.2.0.jar:/Users/anastasiasasina/.m2/repository/org/apache/lucene/lucene-sandbox/10.2.0/lucene-sandbox-10.2.0.jar:/Users/anastasiasasina/.m2/repository/org/apache/lucene/lucene-facet/10.2.0/lucene-facet-10.2.0.jar:/Users/anastasiasasina/.m2/repository/org/springframework/boot/spring-boot-starter/3.4.4/spring-boot-starter-3.4.4.jar:/Users/anastasiasasina/.m2/repository/org/springframework/boot/spring-boot/3.4.4/spring-boot-3.4.4.jar:/Users/anastasiasasina/.m2/repository/org/springframework/spring-context/6.2.5/spring-context-6.2.5.jar:/Users/anastasiasasina/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.4.4/spring-boot-autoconfigure-3.4.4.jar:/Users/anastasiasasina/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.4.4/spring-boot-starter-logging-3.4.4.jar:/Users/anastasiasasina/.m2/repository/ch/qos/logback/logback-classic/1.5.18/logback-classic-1.5.18.jar:/Users/anastasiasasina/.m2/repository/ch/qos/logback/logback-core/1.5.18/logback-core-1.5.18.jar:/Users/anastasiasasina/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar:/Users/anastasiasasina/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.jar:/Users/anastasiasasina/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar:/Users/anastasiasasina/.m2/repository/org/slf4j/jul-to-slf4j/2.0.17/jul-to-slf4j-2.0.17.jar:/Users/anastasiasasina/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/anastasiasasina/.m2/repository/org/springframework/spring-core/6.2.5/spring-core-6.2.5.jar:/Users/anastasiasasina/.m2/repository/org/springframework/spring-jcl/6.2.5/spring-jcl-6.2.5.jar:/Users/anastasiasasina/.m2/repository/org/yaml/snakeyaml/2.3/snakeyaml-2.3.jar:/Users/anastasiasasina/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.4.4/spring-boot-starter-web-3.4.4.jar:/Users/anastasiasasina/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.4.4/spring-boot-starter-json-3.4.4.jar:/Users/anastasiasasina/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.18.3/jackson-databind-2.18.3.jar:/Users/anastasiasasina/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.18.3/jackson-annotations-2.18.3.jar:/Users/anastasiasasina/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.18.3/jackson-core-2.18.3.jar:/Users/anastasiasasina/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.18.3/jackson-datatype-jdk8-2.18.3.jar:/Users/anastasiasasina/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.18.3/jackson-datatype-jsr310-2.18.3.jar:/Users/anastasiasasina/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.18.3/jackson-module-parameter-names-2.18.3.jar:/Users/anastasiasasina/.m2/repository/org/springframework/spring-web/6.2.5/spring-web-6.2.5.jar:/Users/anastasiasasina/.m2/repository/org/springframework/spring-beans/6.2.5/spring-beans-6.2.5.jar:/Users/anastasiasasina/.m2/repository/io/micrometer/micrometer-observation/1.14.5/micrometer-observation-1.14.5.jar:/Users/anastasiasasina/.m2/repository/io/micrometer/micrometer-commons/1.14.5/micrometer-commons-1.14.5.jar:/Users/anastasiasasina/.m2/repository/org/springframework/spring-webmvc/6.2.5/spring-webmvc-6.2.5.jar:/Users/anastasiasasina/.m2/repository/org/springframework/spring-aop/6.2.5/spring-aop-6.2.5.jar:/Users/anastasiasasina/.m2/repository/org/springframework/spring-expression/6.2.5/spring-expression-6.2.5.jar:/Users/anastasiasasina/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.4.4/spring-boot-starter-tomcat-3.4.4.jar:/Users/anastasiasasina/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.39/tomcat-embed-core-10.1.39.jar:/Users/anastasiasasina/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.39/tomcat-embed-el-10.1.39.jar:/Users/anastasiasasina/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.39/tomcat-embed-websocket-10.1.39.jar ru.spb.itmo.asashina.lab4.RGAInsertBenchmarkRunner
+# JMH version: 1.37
+# VM version: JDK 23.0.2, OpenJDK 64-Bit Server VM, 23.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=49375 -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab4.RGAInsertBenchmarkRunner.insertFiveHundredLetter
+
+# Run progress: 0,00% complete, ETA 00:03:15
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 35,004 ms/op
+# Warmup Iteration   2: 34,846 ms/op
+# Warmup Iteration   3: 34,882 ms/op
+Iteration   1: 33,661 ms/op
+Iteration   2: 33,634 ms/op
+Iteration   3: 33,555 ms/op
+Iteration   4: 33,519 ms/op
+Iteration   5: 34,103 ms/op
+Iteration   6: 34,866 ms/op
+Iteration   7: 34,776 ms/op
+Iteration   8: 34,519 ms/op
+Iteration   9: 34,650 ms/op
+Iteration  10: 34,475 ms/op
+
+# Run progress: 6,67% complete, ETA 00:03:16
+# Fork: 1 of 2
+# Warmup Iteration   1: 33,515 ms/op
+# Warmup Iteration   2: 33,179 ms/op
+# Warmup Iteration   3: 33,796 ms/op
+Iteration   1: 33,836 ms/op
+Iteration   2: 33,752 ms/op
+Iteration   3: 33,708 ms/op
+Iteration   4: 33,520 ms/op
+Iteration   5: 34,161 ms/op
+Iteration   6: 34,697 ms/op
+Iteration   7: 34,692 ms/op
+Iteration   8: 34,721 ms/op
+Iteration   9: 34,506 ms/op
+Iteration  10: 34,683 ms/op
+
+# Run progress: 13,33% complete, ETA 00:03:01
+# Fork: 2 of 2
+# Warmup Iteration   1: 31,600 ms/op
+# Warmup Iteration   2: 32,958 ms/op
+# Warmup Iteration   3: 35,231 ms/op
+Iteration   1: 32,981 ms/op
+Iteration   2: 34,984 ms/op
+Iteration   3: 32,898 ms/op
+Iteration   4: 34,737 ms/op
+Iteration   5: 33,301 ms/op
+Iteration   6: 33,940 ms/op
+Iteration   7: 32,787 ms/op
+Iteration   8: 33,784 ms/op
+Iteration   9: 34,529 ms/op
+Iteration  10: 33,304 ms/op
+
+
+Result "ru.spb.itmo.asashina.lab4.RGAInsertBenchmarkRunner.insertFiveHundredLetter":
+  33,976 ±(99.9%) 0,603 ms/op [Average]
+  (min, avg, max) = (32,787, 33,976, 34,984), stdev = 0,694
+  CI (99.9%): [33,373, 34,579] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 23.0.2, OpenJDK 64-Bit Server VM, 23.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=49375 -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab4.RGAInsertBenchmarkRunner.insertFiveThousandLetter
+
+# Run progress: 20,00% complete, ETA 00:02:47
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 336,883 ms/op
+# Warmup Iteration   2: 408,908 ms/op
+# Warmup Iteration   3: 411,843 ms/op
+Iteration   1: 336,639 ms/op
+Iteration   2: 344,724 ms/op
+Iteration   3: 342,146 ms/op
+Iteration   4: 349,064 ms/op
+Iteration   5: 344,223 ms/op
+Iteration   6: 342,543 ms/op
+Iteration   7: 344,390 ms/op
+Iteration   8: 345,216 ms/op
+Iteration   9: 348,299 ms/op
+Iteration  10: 348,452 ms/op
+
+# Run progress: 26,67% complete, ETA 00:02:37
+# Fork: 1 of 2
+# Warmup Iteration   1: 382,997 ms/op
+# Warmup Iteration   2: 386,875 ms/op
+# Warmup Iteration   3: 336,591 ms/op
+Iteration   1: 392,464 ms/op
+Iteration   2: 382,878 ms/op
+Iteration   3: 389,468 ms/op
+Iteration   4: 352,553 ms/op
+Iteration   5: 336,952 ms/op
+Iteration   6: 390,376 ms/op
+Iteration   7: 383,368 ms/op
+Iteration   8: 387,717 ms/op
+Iteration   9: 353,693 ms/op
+Iteration  10: 343,369 ms/op
+
+# Run progress: 33,33% complete, ETA 00:02:30
+# Fork: 2 of 2
+# Warmup Iteration   1: 380,379 ms/op
+# Warmup Iteration   2: 390,022 ms/op
+# Warmup Iteration   3: 387,589 ms/op
+Iteration   1: 385,991 ms/op
+Iteration   2: 387,769 ms/op
+Iteration   3: 386,500 ms/op
+Iteration   4: 385,021 ms/op
+Iteration   5: 388,924 ms/op
+Iteration   6: 388,599 ms/op
+Iteration   7: 392,246 ms/op
+Iteration   8: 395,419 ms/op
+Iteration   9: 401,026 ms/op
+Iteration  10: 347,221 ms/op
+
+
+Result "ru.spb.itmo.asashina.lab4.RGAInsertBenchmarkRunner.insertFiveThousandLetter":
+  378,578 ±(99.9%) 16,966 ms/op [Average]
+  (min, avg, max) = (336,952, 378,578, 401,026), stdev = 19,539
+  CI (99.9%): [361,611, 395,544] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 23.0.2, OpenJDK 64-Bit Server VM, 23.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=49375 -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab4.RGAInsertBenchmarkRunner.insertOneHundredLetter
+
+# Run progress: 40,00% complete, ETA 00:02:23
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 6,382 ms/op
+# Warmup Iteration   2: 6,538 ms/op
+# Warmup Iteration   3: 6,502 ms/op
+Iteration   1: 6,475 ms/op
+Iteration   2: 6,547 ms/op
+Iteration   3: 6,646 ms/op
+Iteration   4: 6,543 ms/op
+Iteration   5: 6,565 ms/op
+Iteration   6: 6,797 ms/op
+Iteration   7: 6,946 ms/op
+Iteration   8: 6,652 ms/op
+Iteration   9: 6,689 ms/op
+Iteration  10: 6,541 ms/op
+
+# Run progress: 46,67% complete, ETA 00:02:05
+# Fork: 1 of 2
+# Warmup Iteration   1: 6,776 ms/op
+# Warmup Iteration   2: 6,622 ms/op
+# Warmup Iteration   3: 6,964 ms/op
+Iteration   1: 6,792 ms/op
+Iteration   2: 7,017 ms/op
+Iteration   3: 7,148 ms/op
+Iteration   4: 6,743 ms/op
+Iteration   5: 6,734 ms/op
+Iteration   6: 6,717 ms/op
+Iteration   7: 6,766 ms/op
+Iteration   8: 6,707 ms/op
+Iteration   9: 6,703 ms/op
+Iteration  10: 6,708 ms/op
+
+# Run progress: 53,33% complete, ETA 00:01:47
+# Fork: 2 of 2
+# Warmup Iteration   1: 6,425 ms/op
+# Warmup Iteration   2: 6,768 ms/op
+# Warmup Iteration   3: 6,477 ms/op
+Iteration   1: 6,470 ms/op
+Iteration   2: 6,432 ms/op
+Iteration   3: 6,592 ms/op
+Iteration   4: 6,450 ms/op
+Iteration   5: 6,381 ms/op
+Iteration   6: 6,446 ms/op
+Iteration   7: 6,443 ms/op
+Iteration   8: 6,526 ms/op
+Iteration   9: 6,374 ms/op
+Iteration  10: 6,775 ms/op
+
+
+Result "ru.spb.itmo.asashina.lab4.RGAInsertBenchmarkRunner.insertOneHundredLetter":
+  6,646 ±(99.9%) 0,182 ms/op [Average]
+  (min, avg, max) = (6,374, 6,646, 7,148), stdev = 0,209
+  CI (99.9%): [6,464, 6,828] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 23.0.2, OpenJDK 64-Bit Server VM, 23.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=49375 -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab4.RGAInsertBenchmarkRunner.insertOneLetter
+
+# Run progress: 60,00% complete, ETA 00:01:31
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 0,067 ms/op
+# Warmup Iteration   2: 0,067 ms/op
+# Warmup Iteration   3: 0,070 ms/op
+Iteration   1: 0,069 ms/op
+Iteration   2: 0,068 ms/op
+Iteration   3: 0,068 ms/op
+Iteration   4: 0,070 ms/op
+Iteration   5: 0,069 ms/op
+Iteration   6: 0,069 ms/op
+Iteration   7: 0,068 ms/op
+Iteration   8: 0,069 ms/op
+Iteration   9: 0,068 ms/op
+Iteration  10: 0,070 ms/op
+
+# Run progress: 66,67% complete, ETA 00:01:15
+# Fork: 1 of 2
+# Warmup Iteration   1: 0,067 ms/op
+# Warmup Iteration   2: 0,066 ms/op
+# Warmup Iteration   3: 0,069 ms/op
+Iteration   1: 0,067 ms/op
+Iteration   2: 0,068 ms/op
+Iteration   3: 0,070 ms/op
+Iteration   4: 0,070 ms/op
+Iteration   5: 0,070 ms/op
+Iteration   6: 0,069 ms/op
+Iteration   7: 0,067 ms/op
+Iteration   8: 0,068 ms/op
+Iteration   9: 0,070 ms/op
+Iteration  10: 0,069 ms/op
+
+# Run progress: 73,33% complete, ETA 00:00:59
+# Fork: 2 of 2
+# Warmup Iteration   1: 0,064 ms/op
+# Warmup Iteration   2: 0,066 ms/op
+# Warmup Iteration   3: 0,066 ms/op
+Iteration   1: 0,069 ms/op
+Iteration   2: 0,068 ms/op
+Iteration   3: 0,066 ms/op
+Iteration   4: 0,066 ms/op
+Iteration   5: 0,065 ms/op
+Iteration   6: 0,064 ms/op
+Iteration   7: 0,064 ms/op
+Iteration   8: 0,067 ms/op
+Iteration   9: 0,065 ms/op
+Iteration  10: 0,066 ms/op
+
+
+Result "ru.spb.itmo.asashina.lab4.RGAInsertBenchmarkRunner.insertOneLetter":
+  0,067 ±(99.9%) 0,002 ms/op [Average]
+  (min, avg, max) = (0,064, 0,067, 0,070), stdev = 0,002
+  CI (99.9%): [0,066, 0,069] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 23.0.2, OpenJDK 64-Bit Server VM, 23.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=49375 -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.spb.itmo.asashina.lab4.RGAInsertBenchmarkRunner.insertOneThousandLetter
+
+# Run progress: 80,00% complete, ETA 00:00:44
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 64,338 ms/op
+# Warmup Iteration   2: 67,922 ms/op
+# Warmup Iteration   3: 67,612 ms/op
+Iteration   1: 68,875 ms/op
+Iteration   2: 67,944 ms/op
+Iteration   3: 70,685 ms/op
+Iteration   4: 67,892 ms/op
+Iteration   5: 67,137 ms/op
+Iteration   6: 71,846 ms/op
+Iteration   7: 67,597 ms/op
+Iteration   8: 67,573 ms/op
+Iteration   9: 72,619 ms/op
+Iteration  10: 68,905 ms/op
+
+# Run progress: 86,67% complete, ETA 00:00:29
+# Fork: 1 of 2
+# Warmup Iteration   1: 65,000 ms/op
+# Warmup Iteration   2: 68,107 ms/op
+# Warmup Iteration   3: 64,899 ms/op
+Iteration   1: 67,233 ms/op
+Iteration   2: 67,185 ms/op
+Iteration   3: 66,022 ms/op
+Iteration   4: 67,809 ms/op
+Iteration   5: 64,596 ms/op
+Iteration   6: 66,321 ms/op
+Iteration   7: 67,790 ms/op
+Iteration   8: 65,332 ms/op
+Iteration   9: 66,947 ms/op
+Iteration  10: 67,035 ms/op
+
+# Run progress: 93,33% complete, ETA 00:00:14
+# Fork: 2 of 2
+# Warmup Iteration   1: 67,361 ms/op
+# Warmup Iteration   2: 69,870 ms/op
+# Warmup Iteration   3: 71,004 ms/op
+Iteration   1: 71,063 ms/op
+Iteration   2: 71,040 ms/op
+Iteration   3: 70,877 ms/op
+Iteration   4: 70,391 ms/op
+Iteration   5: 70,162 ms/op
+Iteration   6: 69,945 ms/op
+Iteration   7: 70,015 ms/op
+Iteration   8: 70,057 ms/op
+Iteration   9: 69,993 ms/op
+Iteration  10: 69,444 ms/op
+
+
+Result "ru.spb.itmo.asashina.lab4.RGAInsertBenchmarkRunner.insertOneThousandLetter":
+  68,463 ±(99.9%) 1,781 ms/op [Average]
+  (min, avg, max) = (64,596, 68,463, 71,063), stdev = 2,051
+  CI (99.9%): [66,682, 70,244] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:03:40
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                          Mode  Cnt    Score    Error  Units
+RGAInsertBenchmarkRunner.insertFiveHundredLetter   avgt   20   33,976 ±  0,603  ms/op
+RGAInsertBenchmarkRunner.insertFiveThousandLetter  avgt   20  378,578 ± 16,966  ms/op
+RGAInsertBenchmarkRunner.insertOneHundredLetter    avgt   20    6,646 ±  0,182  ms/op
+RGAInsertBenchmarkRunner.insertOneLetter           avgt   20    0,067 ±  0,002  ms/op
+RGAInsertBenchmarkRunner.insertOneThousandLetter   avgt   20   68,463 ±  1,781  ms/op
+
+Process finished with exit code 0
