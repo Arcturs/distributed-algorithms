@@ -68,7 +68,7 @@ public class Replica {
 
     private void syncWithOthers() {
         List<Message> messages = env.receiveMessages(id);
-        messages.forEach(message -> document.applyRemoteOperations(message.getOperations()));
+        messages.forEach(message -> document.applyRemoteOperations(message.operations()));
     }
 
 }

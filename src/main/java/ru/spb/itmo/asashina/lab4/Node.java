@@ -44,10 +44,6 @@ public class Node {
         isVisible = visible;
     }
 
-    public void setDeletedBy(int deletedBy) {
-        this.deletedBy = deletedBy;
-    }
-
     public void markDeleted(int replicaId) {
         this.isVisible = false;
         this.deletedBy = replicaId;

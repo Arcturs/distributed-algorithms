@@ -7,9 +7,9 @@ import ru.spb.itmo.asashina.lab4.operation.InsertOperation;
 import ru.spb.itmo.asashina.lab4.operation.Operation;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
 public class Document {
@@ -19,8 +19,8 @@ public class Document {
     private final Node root;
     private final int id;
     private final AtomicLong logicTime = new AtomicLong(0);
-    private final Map<NodeId, Node> nodeTree = new HashMap<>();
-    private final Map<Integer, Long> clocks = new HashMap<>();
+    private final Map<NodeId, Node> nodeTree = new ConcurrentHashMap<>();
+    private final Map<Integer, Long> clocks = new ConcurrentHashMap<>();
 
     public Document(int id) {
         this.root = new Node(new NodeId(Long.MIN_VALUE, id), '\0');
@@ -53,7 +53,7 @@ public class Document {
     }
 
     public Message prepareSyncForBroadcast() {
-        return new Message(id, new HashMap<>(clocks), getPendingOperations());
+        return new Message(getPendingOperations());
     }
 
     public void insert(char letter) {
@@ -121,7 +121,9 @@ public class Document {
     private void delete(NodeId nodeId) {
         var node = nodeTree.get(nodeId);
         if (node != null) {
-            node.markDeleted(id);
+            synchronized (this) {
+                node.markDeleted(id);
+            }
         }
         clocks.merge(id, nodeId.timestamp(), Math::max);
         log.debug("Удален символ в документе {} в момент времени {}, текущее состояние {}",
@@ -166,8 +168,10 @@ public class Document {
     private void handleDelete(DeleteOperation op) {
         Node node = nodeTree.get(op.getNodeId());
         if (node != null) {
-            node.markDeleted(op.getDeletedBy());
-            node.setVisible(false);
+            synchronized (this) {
+                node.markDeleted(op.getDeletedBy());
+                node.setVisible(false);
+            }
         }
         clocks.merge(op.getNodeId().id(), op.getNodeId().timestamp(), Math::max);
         log.debug("Удален символ в документе {} в момент времени {}, текущее состояние {}",
