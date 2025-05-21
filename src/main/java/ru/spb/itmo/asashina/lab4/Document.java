@@ -93,11 +93,9 @@ public class Document {
             prevNode = prevNode.getNext();
         }
 
-        synchronized (this) {
-            newNode.setNext(prevNode.getNext());
-            prevNode.setNext(newNode);
-            nodeTree.put(newNode.getId(), newNode);
-        }
+        newNode.setNext(prevNode.getNext());
+        prevNode.setNext(newNode);
+        nodeTree.put(newNode.getId(), newNode);
         clocks.merge(id, logicTime.get(), Math::max);
         log.debug("Добавлена новая буква {} в документ {} в момент времени {}, текущее состояние {}",
                 letter, id, clocks.get(id), toText());
@@ -121,9 +119,7 @@ public class Document {
     private void delete(NodeId nodeId) {
         var node = nodeTree.get(nodeId);
         if (node != null) {
-            synchronized (this) {
-                node.markDeleted(id);
-            }
+            node.markDeleted(id);
         }
         clocks.merge(id, nodeId.timestamp(), Math::max);
         log.debug("Удален символ в документе {} в момент времени {}, текущее состояние {}",
@@ -155,10 +151,8 @@ public class Document {
             current = current.getNext();
         }
 
-        synchronized (this) {
-            newNode.setNext(current.getNext());
-            current.setNext(newNode);
-        }
+        newNode.setNext(current.getNext());
+        current.setNext(newNode);
 
         clocks.merge(op.getNodeId().id(), op.getNodeId().timestamp(), Math::max);
         log.debug("Добавлена новая буква {} в документ {} в момент времени {}, текущее состояние {}",
@@ -168,10 +162,8 @@ public class Document {
     private void handleDelete(DeleteOperation op) {
         Node node = nodeTree.get(op.getNodeId());
         if (node != null) {
-            synchronized (this) {
-                node.markDeleted(op.getDeletedBy());
-                node.setVisible(false);
-            }
+            node.markDeleted(op.getDeletedBy());
+            node.setVisible(false);
         }
         clocks.merge(op.getNodeId().id(), op.getNodeId().timestamp(), Math::max);
         log.debug("Удален символ в документе {} в момент времени {}, текущее состояние {}",
